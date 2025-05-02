@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    min-height: 100vh;
+    background-color: #e0f7fa;
+    overflow-x: hidden;
+    & strong {
+        color: #FF6F00;
+    }
+}
+
+main{
+    box-shadow: 1px 1px 5px inset #000000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0092A6;
+    background-image: url("/assets/imagens/medina-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    & header{
+        width: 100%;
+        height: 110px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        & .logo{
+            height: 65px;
+        }
+        & nav{
+            width: 400px;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            margin-right: 20px;
+            & a{
+                color: #fff;
+                font-size: 20px;
+                text-decoration: none;
+                text-transform: none;
+                font-weight: 300;
+            }
+            & a:hover{
+                color: #ffffffb2;
+                transform: scale(1.05);
+                cursor: pointer;
+            }
+        }
+    }
+    & .caixa-central{
+        display: flex;
+        align-items: center;
+        height: 50vh;
+        width: 450px;
+
+        & .frase-efeito{
+            width: 100%;
+        }
+    }
+}
+
+section{
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #67848B, #65ECFD);
+    box-shadow: 1px 1px 10px inset #67848bb0;
+    & .secao-campeoes{
+        color: #FFECB3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & h1{
+            font-size: 3em;
+            margin: 50px;
+        }
+        & .aba-campeoes{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            & .content-campeao{
+                display: flex;
+                justify-content: space-around;
+                background-color: #FFECB3;
+                margin: 10px;
+                height: 229px;
+                width: 40vw;
+                max-width: 550px;
+                padding: 10px;
+                color: #000;
+                border-radius: 10px;
+                & img{
+                    min-width: 180px;
+                    max-width: 200px;
+                    border-radius: 10px;
+                }
+                & article {
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    & h4{
+                        color: #FF6F00;
+                        font-size: 20px;
+                    }
+                    & h5{
+                        font-size: 18px;
+                    }
+                    & p{
+                        font-size: 16px;
+                        margin-top: 10px;
+                        width: 230px;
+                    }
+                }
+            }
+        }
+    }
+    & .comece-hoje{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+        padding-bottom: 50px;
+        color: #FFECB3;
+        & h1{
+            align-self: center;
+            font-size: 3em;
+            margin: 50px;
+            margin-bottom: 20px;
+
+        }
+        & .convite{
+            color: #FFECB3;
+        }
+        & .secao-iframe{
+            display: flex;
+            justify-content: space-between;
+            width: 85vw;
+            & article{
+                display: flex;
+                flex-direction: column;
+                min-width: 400px;
+                text-align: justify;
+                align-items: center;
+                & h3{
+                    font-size: 2.2em;
+                }
+                & p{
+                    font-size: 28px;
+                    max-width: 450px;
+                    margin-bottom: 20px;
+                }
+                & span{
+                    display: flex;
+                    align-items: center;
+                    & img{
+                        width: 100px;
+                    }
+                }
+            }
+        }
+        & strong, h3{
+            color: #FF6F00;
+        }
+        & h2{
+            align-self: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+footer{
+    background-color: #002922;
+    color: #e0f7fa;
+    display: flex;
+    justify-content: space-between;
+    min-height: 250px;
+    padding: 30px;
+    & div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 310px;
+        & span{
+            display: flex;
+            align-items: center;
+        }
+        & a.link{
+            color: #e0f7fa;
+            text-decoration: none;
+            text-transform: none;
+            padding: 5px;
+            font-weight: 700;
+            width: 30ch;
+            font-size: 16px;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+    & .aviso{
+        text-align: justify;
+        & img{
+            width: 290px;
+        }
+    }
+    & .creditos{
+        text-align: center;
+        & h6{
+            font-size: 18px;
+        }
+        & span{
+            width: 300px;
+        }
+    }
+}
