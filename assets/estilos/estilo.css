@@ -26,7 +26,7 @@ main{
     flex-direction: column;
     align-items: center;
     background-color: #0092A6;
-    background-image: url("/assets/imagens/medina-background.png");
+    background-image: url("/assets/imagens/foto-medina-fundo.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -223,6 +223,9 @@ footer{
     }
 }
 @media screen and (min-width: 1115px){
+    main{
+        background-attachment: fixed;
+    }
     .secao-iframe article{
         text-align: justify;
     }
