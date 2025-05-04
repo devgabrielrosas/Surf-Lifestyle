@@ -1,0 +1,144 @@
+@media only screen and (min-width:767px) and (max-width:1110px){
+    main{
+        header{
+            margin-top: 20px;
+            padding: 0;
+            nav{
+                justify-content: flex-end;
+                padding: 0;
+                & a{
+                    padding: 10px;
+                    font-weight: 500;
+                }
+            }
+        }
+        & .frase-efeito{
+            max-width: 700px!important;
+        }
+    }
+    section{
+        .secao-campeoes{
+            & h1{
+                font-size: 3.5em;
+            }
+            & .aba-campeoes{
+                & .content-campeao{
+                    width: 360px;
+                    justify-content: center;
+                    text-align: center;
+                    & article{
+                        & h4{
+                            font-size: 3em;
+                        }
+                        & h5{
+                            font-size: 2em;
+                        }
+                        & p{
+                            font-size: 1.5em;
+                            text-align: justify;
+                            align-self: center;
+                            width: 100%;
+                        }
+                    }
+                    & img{
+                        display: none!important;
+                    }
+                }
+            }
+        }
+    }
+    .comece-hoje{
+        & h1{
+            font-size: 3.5em!important;
+        }
+        & h2{
+            font-size: 3em!important;
+            text-align: center;
+        }
+        & p{
+            text-align: justify;
+        }
+        & .secao-iframe{
+            flex-direction: column;
+            align-items: center;
+            & article{
+                & p{
+                    width: 638px!important;
+                }
+                & span{
+                    margin: 20px 0;
+                    & h3{
+                        font-size: 3em!important;
+                    }
+                } 
+            }
+            & iframe{
+                width: 100%;
+            }
+        }
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        & div{
+            margin: 25px 0;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #fff;
+            & img{
+                width: 100px;
+                margin: 20px;
+            }
+            & p{
+                font-size: 27px;
+                max-width: 600px;
+            }
+        }
+        & .aviso img{
+            width: 600px;
+        }
+        & .creditos {
+           & span{
+            align-self: flex-start;
+            text-indent: 67px;
+
+           }
+            & span a{
+                font-size: 2em;
+            }
+            & .insta-credito{
+                display: none;
+            }
+            & h6{
+            font-size: 3em;
+            padding: 5px;
+            }
+        }
+        & .redes-sociais{
+            margin-bottom: 10px;
+            & span a{
+                font-size: 2em;
+            }
+        }
+    }
+}
+@media only screen and (min-width:770px) and (max-width:790px){
+    header{
+        justify-content: space-between;
+    }
+    header nav{
+        flex-direction: column;
+    }
+    header nav a{
+        align-self: flex-end;
+    }
+    section{
+        
+        .secao-campeoes .aba-campeoes .content-campeao{
+            flex-direction: column;
+            & img{
+                display: block!important;
+            }
+        }
+    }
+}

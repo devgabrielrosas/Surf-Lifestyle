@@ -7,7 +7,7 @@
 }
 
 body, html{
-    min-height: 100vh;
+    min-height: 100dvh;
     background-color: #e0f7fa;
     overflow-x: hidden;
     font-family: "Bebas Neue", sans-serif;
@@ -21,7 +21,7 @@ body, html{
 
 main{
     box-shadow: 1px 1px 5px inset #000000;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +32,7 @@ main{
     background-repeat: no-repeat;
     & header{
         width: 100%;
-        height: 110px;
+        min-height: 110px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -63,17 +63,17 @@ main{
     & .caixa-central{
         display: flex;
         align-items: center;
-        height: 50vh;
-        width: 450px;
-
+        justify-content: center;
+        height: 50dvh;
+        width: 100dvw;
         & .frase-efeito{
-            width: 100%;
+            max-width: 50%;
         }
     }
 }
 
 section{
-    min-height: 100vh;
+    min-height: 100dvh;
     background-image: linear-gradient(to bottom, #67848B, #65ECFD);
     box-shadow: 1px 1px 10px inset #67848bb0;
     & .secao-campeoes{
@@ -94,15 +94,14 @@ section{
                 justify-content: space-around;
                 background-color: #FFECB3;
                 margin: 10px;
-                height: 280px;
-                width: 40vw;
+                min-height: 280px;
+                width: 40dvw;
                 max-width: 550px;
                 padding: 10px;
                 color: #000;
                 border-radius: 10px;
                 & img{
                     min-width: 180px;
-                    max-width: 200px;
                     border-radius: 10px;
                 }
                 & article {
@@ -146,12 +145,11 @@ section{
         & .secao-iframe{
             display: flex;
             justify-content: space-between;
-            width: 85vw;
+            width: 85dvw;
             & article{
                 display: flex;
                 flex-direction: column;
-                min-width: 400px;
-                text-align: justify;
+                max-width: 600px;
                 align-items: center;
                 & h3{
                     font-size: 2.2em;
@@ -193,7 +191,6 @@ footer{
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        width: 310px;
         & span{
             display: flex;
             align-items: center;
@@ -222,8 +219,17 @@ footer{
         & h6{
             font-size: 18px;
         }
-        & span{
-            width: 300px;
-        }
+
+    }
+}
+@media screen and (min-width: 1115px){
+    .secao-iframe article{
+        text-align: justify;
+    }
+    footer div{
+        width: 310px;
+    }
+    & .creditos span{
+        width: 300px;
     }
 }
