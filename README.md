@@ -4,7 +4,7 @@ Projeto de uma landing page moderna e responsiva de estilo de vida surfista, com
 
 ## 🔗 Acesse o projeto
 
-[➡️ Clique aqui para visualizar a página]([https://devgabrielrosas.github.io/Surf-Lifestyle/](https://surf-lifestyle-five.vercel.app/))
+[➡️ Clique aqui para visualizar a página](https://surf-lifestyle-five.vercel.app/)
 
 
 ## 🛠️ Tecnologias utilizadas
