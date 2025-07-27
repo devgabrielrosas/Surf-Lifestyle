@@ -1,0 +1,152 @@
+@import url('./variaveis.css');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    min-height: 100dvh;
+    background-color: var(--bg-body);
+    overflow-x: hidden;
+    font-family: var(--font-titles);
+    & p,a{
+        font-family: var(--font-main);
+    }
+    & strong {
+        color: var(--highlight);
+    }
+}
+
+main{
+    box-shadow: 1px 1px 5px inset var(--default-black);
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-main);
+    background-image: url("../imagens/foto-medina-fundo.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    & header{
+        width: 100%;
+        min-height: 110px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+
+        & .logo{
+            height: 65px;
+        }
+        & nav{
+            width: 400px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin-right: 20px;
+            & img#navegacao__menu{
+                    height: 40px;
+                    cursor: pointer;
+                }
+            & a{
+                color: #fff;
+                font-size: 20px;
+                text-decoration: none;
+                text-transform: none;
+                font-weight: 400;
+            }
+            & a:hover{
+                color: #ffffffb2;
+                transform: scale(1.05);
+                cursor: pointer;
+            }
+        }
+    }
+    & .caixa-central{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50dvh;
+        width: 100dvw;
+        & .frase-efeito{
+            max-width: 50%;
+        }
+    }
+}
+
+section{
+    min-height: 100dvh;
+    background-image: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+    /* box-shadow: 1px 1px 10px inset #67848bb0; */
+    & .comece-hoje{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+        padding-bottom: 50px;
+        color: var(--text-dark-bg);
+        & h1{
+            align-self: center;
+            font-size: 3em;
+            margin: 50px;
+            margin-bottom: 20px;
+
+        }
+        & .convite{
+            color: var(--text-dark-bg);
+        }
+        & .secao-iframe{
+            display: flex;
+            justify-content: space-between;
+            width: 85dvw;
+            & article{
+                display: flex;
+                flex-direction: column;
+                max-width: 600px;
+                align-items: center;
+                & h3{
+                    font-size: 2.2em;
+                }
+                & p{
+                    font-size: 28px;
+                    max-width: 450px;
+                    margin-bottom: 20px;
+                }
+                & span{
+                    display: flex;
+                    align-items: center;
+                    & img{
+                        width: 100px;
+                    }
+                }
+            }
+        }
+        & strong, h3{
+            color: var(--highlight);
+        }
+        & h2{
+            align-self: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+        }
+    }
+}
+.caixa-onda{
+    width: 100%;
+    background-image: linear-gradient(to bottom, var(--gradient-end) 50%, var(--bg-footer));
+    display: flex;
+}
+footer{
+    background-color: var(--bg-footer);
+    color: var(--text-light-bg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+}

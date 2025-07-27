@@ -1,0 +1,50 @@
+# Ambiente virtual
+venv/
+.env/
+ENV/
+env/
+*.env
+
+# Bytecode e cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs
+*.log
+
+# Arquivos temporários
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Banco de dados SQLite (se estiver usando)
+*.sqlite3
+*.db
+
+# Arquivos de configuração locais
+instance/
+config.py
+
+# VSCode
+.vscode/
+
+# Pytest
+.pytest_cache/
+
+# Cobertura de testes
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+
+# Distribuição
+build/
+dist/
+*.egg-info/
+
+# Outros
+.mypy_cache/
+.dmypy.json
+.pyre/
