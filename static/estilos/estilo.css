@@ -1,25 +1,3 @@
-@import url('./variaveis.css');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body, html{
-    min-height: 100dvh;
-    background-color: var(--bg-body);
-    overflow-x: hidden;
-    font-family: var(--font-titles);
-    & p,a{
-        font-family: var(--font-main);
-    }
-    & strong {
-        color: var(--highlight);
-    }
-}
-
 main{
     box-shadow: 1px 1px 5px inset var(--default-black);
     height: 100dvh;
@@ -137,16 +115,4 @@ section{
             margin-bottom: 50px;
         }
     }
-}
-.caixa-onda{
-    width: 100%;
-    background-image: linear-gradient(to bottom, var(--gradient-end) 50%, var(--bg-footer));
-    display: flex;
-}
-footer{
-    background-color: var(--bg-footer);
-    color: var(--text-light-bg);
-    display: flex;
-    flex-direction: column;
-    min-height: 100px;
 }

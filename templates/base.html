@@ -1,0 +1,19 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Surf Lifestyle{% endblock %}</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='imagens/onda-icone.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos/base.css') }}">
+</head>
+<body>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    <footer>
+        <div class="caixa-onda"><img src="../static/imagens/onda_sem_fundo.svg" alt=""></div>
+        <footer id="sobre"></footer>
+    </footer>
+
+</body>
+</html>
