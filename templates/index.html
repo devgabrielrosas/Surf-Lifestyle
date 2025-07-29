@@ -1,5 +1,36 @@
 {% extends 'base.html' %}
 
-{% block content %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='estilos/index.css') }}">  <!-- ESTILO DA PAGINA INDEX -->
+{% endblock %}
 
+{% block content %}
+<main class="caixa-principal">
+        <header>
+            <a href=""><img class="logo" id="logo" src="{{ url_for('static', filename='imagens/logo.png') }}" alt="Logo Surf Lifestyle"></a>
+            <nav class="navegacao">
+                <a href="#quem_somos">Quem somos</a>
+                <a href="#comece-hoje">Comece Hoje</a>
+                <a href="#sobre">Sobre</a>
+            </nav>
+        </header>
+        <div class="caixa-central">
+            <img class="frase-efeito" src="{{ url_for('static', filename='imagens/frase-efeito.png') }}" alt="Frase Efeito">
+        </div>
+    </main>
+    <section>
+        <div class="comece-hoje" id="comece-hoje">
+            <h1>Comece Hoje</h1>
+            <div class="secao-iframe">
+                <article>
+                    <p><strong>Nunca é tarde para sentir a liberdade de uma onda.</strong> Nosso espaço é feito para todas as idades — seja você iniciante, veterano ou alguém que está redescobrindo um sonho antigo. </p>
+                    <span>
+                        <img src="{{ url_for('static', filename='imagens/onda-icone.png') }}" alt="">
+                        <h3>O mar e nós te esperamos.</h3>
+                    </span>
+                </article>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1325.6953794549263!2d-34.843509811339565!3d-7.052669364230749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acdde02d6c2e77%3A0x767b911a7bdfff4e!2sAv.%20Oceano%20Atl%C3%A2ntico%2C%20163%20-%20Lot.%20Bela%20Vista%2C%20Cabedelo%20-%20PB%2C%2058310-000!5e0!3m2!1spt-BR!2sbr!4v1746152679615!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            </div>
+    </section>
 {% endblock %}

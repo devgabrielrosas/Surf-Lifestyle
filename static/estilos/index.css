@@ -1,4 +1,4 @@
-main{
+.caixa-principal{
     box-shadow: 1px 1px 5px inset var(--default-black);
     height: 100dvh;
     display: flex;
