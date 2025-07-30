@@ -1,26 +1,4 @@
-@import url('./variaveis.css');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body, html{
-    min-height: 100dvh;
-    background-color: var(--bg-body);
-    overflow-x: hidden;
-    font-family: var(--font-titles);
-    & p,a{
-        font-family: var(--font-main);
-    }
-    & strong {
-        color: var(--highlight);
-    }
-}
-
-main{
+.caixa-principal{
     box-shadow: 1px 1px 5px inset var(--default-black);
     height: 100dvh;
     display: flex;
@@ -88,12 +66,13 @@ section{
     background-image: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
     /* box-shadow: 1px 1px 10px inset #67848bb0; */
     & .comece-hoje{
+
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         padding: 30px;
-        padding-bottom: 50px;
+        padding-bottom: 200px;
         color: var(--text-dark-bg);
         & h1{
             align-self: center;
@@ -140,48 +119,4 @@ section{
             margin-bottom: 50px;
         }
     }
-}
-.caixa-onda{
-    width: 100%;
-    background-image: linear-gradient(to bottom, var(--gradient-end) 50%, var(--bg-footer));
-    display: flex;
-}
-footer{
-    background-color: var(--bg-footer);
-    color: var(--text-light-bg);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 100px;
-
-    & #pranchas_enfeite{
-        align-self: flex-end;
-        height: 200px;
-        margin-right: 30px;
-    }
-
-    & .sobre__caixa{
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        & p{
-            width: 100%;
-            text-align: justify;
-        }
-
-        & .caixa__logo{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            text-transform: none;
-            color: var(--text-light-bg);
-            & img{
-                width: 80px;
-            }
-        }
-    }
-
 }

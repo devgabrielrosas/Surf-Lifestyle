@@ -1,0 +1,111 @@
+@import url('./variaveis.css');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html{
+    min-height: 100dvh;
+    background-color: var(--bg-body);
+    overflow-x: hidden;
+    font-family: var(--font-titles);
+    & p,a{
+        font-family: var(--font-main);
+    }
+    & strong {
+        color: var(--highlight);
+    }
+}
+.sobre__caixa_pai{
+    background-color: #015871;
+    display: flex;
+    justify-content: space-between;
+    & a#email{
+        padding: 10px;
+        align-self: flex-end;
+        font-size: 14px;
+        font-weight: 300;
+        text-transform: none;
+        text-decoration: none;
+        color: var(--text-dark-bg);
+    }
+    & a#email:hover{
+        text-decoration: underline;
+    }
+}
+.sobre__caixa{
+    background-color: #015871;
+    padding: 10px;
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    & h1{
+        font-size: 2.6em;
+    }
+    & p{
+        width: 100%;
+        text-align: justify;
+        color: var(--text-dark-bg);
+    }
+
+    & .caixa__logo{
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        text-transform: none;
+        color: var(--text-dark-bg);
+        & img{
+            width: 100px;
+
+        }
+    }
+}
+
+.ocean { 
+    height: 5%;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    background: #015871;
+}
+
+.wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+    position: absolute;
+    top: -198px;
+    width: 6400px;
+    height: 198px;
+    animation: wave 14s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    transform: scaleY(0.5) translate3d(0, 0, 0);
+    transform-origin: bottom; 
+}
+
+.wave:nth-of-type(2) {
+    top: -175px;
+    animation: wave 15s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, 
+               swell 7s ease -1.25s infinite;
+    opacity: 1;
+}
+
+@keyframes wave {
+    0% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -1600px;
+    }
+}
+
+@keyframes swell {
+    0%, 100% {
+        transform: translate3d(0,-25px,0);
+    }
+    50% {
+    transform: translate3d(0,5px,0);
+    }
+}

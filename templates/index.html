@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='imagens/onda-icone.png') }}" type="image/x-icon">
-    <link rel="stylesheet" href="{{ url_for('static', filename='estilos/estilo.css') }}">
-    <title>Surf Lifestyle</title>
-</head>
-<body>
-    <main>
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='estilos/index.css') }}">  <!-- ESTILO DA PAGINA INDEX -->
+{% endblock %}
+
+{% block content %}
+<main class="caixa-principal">
         <header>
             <a href=""><img class="logo" id="logo" src="{{ url_for('static', filename='imagens/logo.png') }}" alt="Logo Surf Lifestyle"></a>
             <nav class="navegacao">
@@ -37,18 +34,4 @@
             </div>
             </div>
     </section>
-    <div class="caixa-onda"><img src="../static/imagens/onda_sem_fundo.png" alt=""></div>
-    <footer id="sobre">
-        <div class="sobre__caixa">
-            <a href="#" class="caixa__logo">
-                <h1>Surf Lifestyle</h1>
-                <img src="../static/imagens/onda_icone_logo.png" alt="">
-            </a>
-            <p>
-                © 2025 Alan Clemente, Gabriel Rosas, Jairo Costa, Thalyson Felício — Projeto acadêmico. Todos os direitos reservados.
-            </p>
-        </div>
-        <!-- <img id="pranchas_enfeite" src="../static/imagens/pranchas_enfeite.png" alt=""> -->
-    </footer>
-</body>
-</html>
+{% endblock %}
