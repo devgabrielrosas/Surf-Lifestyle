@@ -3,7 +3,8 @@
     <meta charset="UTF-8">
     <title>{% block title %}Surf Lifestyle{% endblock %}</title>
     <link rel="shortcut icon" href="{{ url_for('static', filename='imagens/onda-icone.png') }}" type="image/x-icon">
-    <link rel="stylesheet" href="{{ url_for('static', filename='estilos/estilos.css') }}">  <!-- ESTILO GERAL DA BASE -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos/estilos.css') }}">
+      <!-- ESTILO GERAL DA BASE -->
     {% block styles %}{% endblock %} <!-- ESTILOS ADICIONAIS DE PÁGINAS -->
 </head>
 <body>
@@ -11,9 +12,26 @@
         {% block content %}{% endblock %}
     </main>
     
-    <footer>
-        <div class="caixa-onda"><img src="../static/imagens/onda_sem_fundo.svg" alt=""></div>
-        <footer id="sobre"></footer>
+    <footer id="sobre">
+        <div class="ocean">
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+        <div class="sobre__caixa_pai">
+            <div class="sobre__caixa">
+                <a href="#" class="caixa__logo">
+                    <img src="../static/imagens/logo.png" alt="">
+                </a>
+                <p>
+                    © 2025 Alan Clemente, Gabriel Rosas, Jairo Costa, Thalyson Felício — Projeto acadêmico. Todos os direitos reservados.
+                </p>
+            </div>
+            <div class="links-rodape">
+                <a href="#">Fale conosco</a>
+                <a href="https://github.com/devgabrielrosas/Surf-Lifestyle" target="_blank" rel="next">Para desenvolvedores</a>
+            </div>
+
+        </div>
     </footer>
 </body>
 </html>
