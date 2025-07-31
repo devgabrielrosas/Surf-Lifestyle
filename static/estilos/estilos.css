@@ -1,5 +1,7 @@
 @import url('./variaveis.css');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -21,16 +23,20 @@ body, html{
     background-color: #015871;
     display: flex;
     justify-content: space-between;
-    & a#email{
+    & .links-rodape{
+        display: flex;
+        align-items: flex-end;
+    }
+    & .links-rodape a{
         padding: 10px;
         align-self: flex-end;
         font-size: 14px;
         font-weight: 300;
         text-transform: none;
         text-decoration: none;
-        color: var(--text-dark-bg);
+        color: var(--text-light);
     }
-    & a#email:hover{
+    & .links-rodape a:hover{
         text-decoration: underline;
     }
 }
@@ -47,7 +53,7 @@ body, html{
     & p{
         width: 100%;
         text-align: justify;
-        color: var(--text-dark-bg);
+        color: var(--text-light);
     }
 
     & .caixa__logo{
@@ -57,9 +63,9 @@ body, html{
         justify-content: center;
         text-decoration: none;
         text-transform: none;
-        color: var(--text-dark-bg);
+        color: var(--text-light-bg);
         & img{
-            width: 100px;
+            height: 55px;
 
         }
     }

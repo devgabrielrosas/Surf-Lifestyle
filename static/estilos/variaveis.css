@@ -1,6 +1,10 @@
 :root {
     /* Fontes: */
 
+    /* Usada para textos de estilo versátil */
+
+    --font-cool: 'Pacifico', cursive;
+
     /* Usada para títulos e elementos principais (body, html). */
 
     --font-titles: 'Bebas Neue', sans-serif;

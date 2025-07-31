@@ -8,18 +8,36 @@
 <main class="caixa-principal">
         <header>
             <a href=""><img class="logo" id="logo" src="{{ url_for('static', filename='imagens/logo.png') }}" alt="Logo Surf Lifestyle"></a>
-            <nav class="navegacao">
-                <a href="#quem_somos">Quem somos</a>
+            <nav>
+                <a href="#quem-somos">Quem somos</a>
                 <a href="#comece-hoje">Comece Hoje</a>
                 <a href="#sobre">Sobre</a>
             </nav>
         </header>
+        <!-- Cabeçalho que aparece -->
+        <div id="header-secundario">
+            <a href=""><img class="logo" id="logo" src="{{ url_for('static', filename='imagens/logo.png') }}" alt="Logo Surf Lifestyle"></a>
+            <nav class="navegacao">
+                <a href="#quem-somos">Quem somos</a>
+                <a href="#comece-hoje">Comece Hoje</a>
+                <a href="#sobre">Sobre</a>
+            </nav>
+        </div>
         <div class="caixa-central">
             <img class="frase-efeito" src="{{ url_for('static', filename='imagens/frase-efeito.png') }}" alt="Frase Efeito">
         </div>
     </main>
     <section>
-
+        <div class="quem-somos" id="quem-somos">
+            <h1>Quem Somos</h1>
+            <p>
+                Nós que integramos a equipe responsável por essa iniciativa, somos uma galera fissurada pela energia que o surf nos proporciona e decidimos compartilhar um pouco dessa vibe. Então, decidimos criar esse projeto para levar <strong>o estilo de vida surfista</strong> para um público maior, usando a tecnologia como meio de propagação e daí surgiu o
+                <strong id="destaque-marca">Surf Lifestyle</strong>
+                Com a proposta de reunir em um só lugar conteúdos sobre o esporte: curiosidades, história, dicas e tudo aquilo que vai te deixar por dentro desse universo.
+                <br>
+                Mais do que um site, o <strong>Surf Lifestyle</strong> é um trabalho feito com <strong>vontade, dedicação e muita conexão</strong>. Queremos informar, inspirar e incluir tanto aqueles que já apreciam a arte há anos, como também atiçar a curiosidade de quem ainda tá por fora e perdendo essa energia sinistra.
+            </p>
+        </div>
         <div class="comece-hoje" id="comece-hoje">
             <h1>Comece Hoje</h1>
             <div class="secao-iframe">
@@ -34,4 +52,5 @@
             </div>
             </div>
     </section>
+    <script src="{{ url_for('static', filename='scripts/scripts.js') }}"></script>
 {% endblock %}
