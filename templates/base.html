@@ -4,12 +4,13 @@
     <title>{% block title %}Surf Lifestyle{% endblock %}</title>
     <link rel="shortcut icon" href="{{ url_for('static', filename='imagens/onda-icone.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static', filename='estilos/estilos.css') }}">
-      <!-- ESTILO GERAL DA BASE -->
+    <!-- ESTILO GERAL DA BASE -->
     {% block styles %}{% endblock %} <!-- ESTILOS ADICIONAIS DE PÁGINAS -->
 </head>
 <body>
     <main>
-        {% block content %}{% endblock %}
+        {% block content %}
+        {% endblock %}
     </main>
     
     <footer id="sobre">
@@ -17,6 +18,7 @@
             <div class="wave"></div>
             <div class="wave"></div>
         </div>
+        
         <div class="sobre__caixa_pai">
             <div class="sobre__caixa">
                 <a href="#" class="caixa__logo">
