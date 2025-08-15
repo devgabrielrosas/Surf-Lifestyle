@@ -17,12 +17,13 @@
 
     --bg-body: #e0f7fa;           /* Fundo geral do body e textos do footer */
     --bg-main: #0092A6;           /* Fundo principal do <main> */
-    --bg-footer: #002922;         /* Fundo escuro */
-    --bg-footer: #FFECB3;         /* Fundo do <footer> */
+    --bg-green: #002922;         /* Fundo escuro */
+    --bg-yellow: #fff3cf;         /* Fundo do <footer> */
 
     /* === Gradientes === */
 
-    --gradient-start: #67848B;    /* Início do gradiente nas sections */
+    --gradient-section: #4e6469;    /* Início do gradiente nas sections */
+    --gradient-start: #569199;    /* Início do gradiente nas sections */
     --gradient-end: #65ECFD;      /* Fim do gradiente nas sections */
 
     /* === Cores de destaque === */
