@@ -24,18 +24,15 @@
                 <a href="#sobre">Sobre</a>
             </nav>
         </div>
-        <div class="caixa-central">
-            <img class="frase-efeito" src="{{ url_for('static', filename='imagens/frase-efeito.png') }}" alt="Frase Efeito">
-        </div>
+        <div class="frase-efeito"></div>
     </main>
     <section>
         <div class="quem-somos" id="quem-somos">
             <h1>Quem Somos</h1>
             <p>
-                Nós que integramos a equipe responsável por essa iniciativa, somos uma galera fissurada pela energia que o surf nos proporciona e decidimos compartilhar um pouco dessa vibe. Então, decidimos criar esse projeto para levar <strong>o estilo de vida surfista</strong> para um público maior, usando a tecnologia como meio de propagação e daí surgiu o
-                <strong id="destaque-marca">Surf Lifestyle</strong>
+                Nós que integramos a equipe responsável por essa iniciativa, somos uma galera fissurada pela energia que o surf nos proporciona e decidimos compartilhar um pouco dessa vibe. Então, decidimos criar esse projeto para levar <strong>o estilo de vida surfista</strong> para um público maior, usando a tecnologia como meio de propagação e daí surgiu o <strong>Surf Lifestyle</strong> <br>
+                <p>
                 Com a proposta de reunir em um só lugar conteúdos sobre o esporte: curiosidades, história, dicas e tudo aquilo que vai te deixar por dentro desse universo.
-                <br>
                 Mais do que um site, o <strong>Surf Lifestyle</strong> é um trabalho feito com <strong>vontade, dedicação e muita conexão</strong>. Queremos informar, inspirar e incluir tanto aqueles que já apreciam a arte há anos, como também atiçar a curiosidade de quem ainda tá por fora e perdendo essa energia sinistra.
             </p>
         </div>
@@ -43,27 +40,9 @@
             <h1>Comece Hoje</h1>
             <div class="secao-iframe">
                 <article>
-                    <p><strong>Nunca é tarde para sentir a liberdade de uma onda.</strong> Nosso espaço é feito para todas as idades — seja você iniciante, veterano ou alguém que está redescobrindo um sonho antigo. </p>
-                    <span>
-                        <img src="{{ url_for('static', filename='imagens/onda-icone.png') }}" alt="">
-                        <h3>O mar e nós te esperamos.</h3>
-                    </span>
+                    <p><strong>Nunca é tarde para sentir a liberdade de uma onda.</strong> Nosso espaço é feito para todas as idades — seja você iniciante, veterano ou alguém que está redescobrindo um sonho antigo. <strong>O mar e nós te esperamos.</strong></p>
+                    <a href="#" class="button">Nosso Blog</a>
                 </article>
-                <div class="caixa__form">
-            <h2>Inscreva-se no nosso daily!</h2>
-            {% if mensagem %}
-                <div class="mensagem-sucesso">{{ mensagem }}</div>
-            {% endif %}
-            <form method="POST">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" required>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-
-                <button type="submit">Surfar!</button>
-            </form>
-        </div>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1325.6953794549263!2d-34.843509811339565!3d-7.052669364230749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acdde02d6c2e77%3A0x767b911a7bdfff4e!2sAv.%20Oceano%20Atl%C3%A2ntico%2C%20163%20-%20Lot.%20Bela%20Vista%2C%20Cabedelo%20-%20PB%2C%2058310-000!5e0!3m2!1spt-BR!2sbr!4v1746152679615!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             </div>
