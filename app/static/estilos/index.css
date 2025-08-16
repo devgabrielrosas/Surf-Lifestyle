@@ -1,50 +1,6 @@
 
 /* Cabeçalho secundário */
-#header-secundario {
-    position: fixed;
-    top: -100px;
-    width: 100%;
-    background-color: #015871;
-    color: white;
-    padding: 1rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: top 0.3s ease-in-out;
-    z-index: 999;
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    & img{
-        height: 45px;
-    }
-    & nav{
-            width: 400px;
-            gap: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-right: 20px;
-            & a{
-                color: var(--text-light);
-                flex-wrap: nowrap;
-                white-space: nowrap;
-                font-size: 20px;
-                text-decoration: none;
-                text-transform: none;
-                font-weight: 400;
-            }
-            & a:hover{
-                color: #ffffffb2;
-                transform: scale(1.05);
-                cursor: pointer;
-            }
-        }
-}
-
-#header-secundario.show {
-  top: 0;
-}
 
 .caixa-principal{
     box-shadow: 1px 1px 5px inset var(--default-black);
@@ -130,7 +86,9 @@ section{
         
         & .caixa__quem-somos{
             display: flex;
-            justify-content: flex-start;
+            justify-content: space-around;
+            padding: 20px 10px;
+            border-radius: 10px;
             & img{
                 border-radius: 10px;
             }
@@ -142,6 +100,10 @@ section{
             text-align: start;
             font-size: 20px;
             line-height: 1.3em;
+            & span{
+                display: block;
+                padding-bottom: 5px;
+            }
             & strong{
                 color: var(--text-light-bg);
             }
@@ -182,7 +144,8 @@ section{
                 }
                 & p{
                     font-size: 26px;
-                    width: 65%;
+                    min-width: 500px;
+                    width: 100%;
                     margin-bottom: 20px;
                     color: var(--text-light-bg);
                 }

@@ -1,28 +1,37 @@
 /* ADICIONAR ESTILIZAÇÃO NESSE .css PARA O cadastro.html */
 .caixa__form {
-    background: linear-gradient(to bottom right, #00c3ff, #ffff1c);
-    border-radius: 20px;
+    align-self: center;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 30px;
     padding: 30px;
     max-width: 400px;
     width: 100%;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: var(--font-titles);
     color: #03484d;
     position: relative;
     overflow: hidden;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#light-title{
+    color: var(--text-light);
 }
 
 .caixa__form h2 {
     text-align: center;
     margin-bottom: 20px;
-    font-weight: 600;
-    color: #005f6b;
+    font-weight: 500;
+    color: var(--text-light-bg);
+    font-family: var(--font-cool);
 }
 
 .caixa__form label {
     display: block;
     margin-bottom: 8px;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 500;
 }
 
@@ -31,7 +40,7 @@
     width: 100%;
     padding: 10px 14px;
     margin-bottom: 20px;
-    border: 2px solid #0099cc;
+    border: 2px solid var(--text-light-bg);
     border-radius: 8px;
     font-size: 16px;
     outline: none;
@@ -43,19 +52,23 @@
 }
 
 .caixa__form button {
-    width: 100%;
-    background-color: #0099cc;
-    color: white;
+    width: 60%;
+    align-self: center  ;
+    background-color: var(--text-light-bg);
+    color: var(--bg-body);
     border: none;
     padding: 12px;
     font-size: 16px;
+    font-weight: 600;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: 0.3s;
 }
 
 .caixa__form button:hover {
-    background-color: #007fa3;
+    background-color: var(--bg-body);
+    color: var(--text-light-bg);
+    transform: scale(1.03);
 }
 
 .mensagem-sucesso {
