@@ -6,11 +6,12 @@
 {% endblock %}
 
 {% block content %}
+
 <nav class="menu-lateral">
 
 
     <div class="btn-expandir">
-        <i class="bi bi-list"></i>
+        <i class="bi bi-list" id="btn-exp"></i>
     </div><!--BTN-EXPANDIR-->
 
     <ul>
@@ -48,5 +49,6 @@
 
 </nav><!--menu lateral-->
 
-<script src="/app/static/scripts/menu.js"></script>
+<script src="{{ url_for('static', filename='scripts/menu.js') }}"></script>
+
 {% endblock %}

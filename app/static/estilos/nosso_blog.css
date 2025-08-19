@@ -19,14 +19,15 @@ nav.menu-lateral{
     padding: 40px 0 40px 1% ;
     box-shadow: 3px 0 0 #002922;
 
-    position: fixed;
+    z-index: 2;
+    position: absolute;
     top: 0;
     left: 0;
     overflow: hidden;
     transition: 0.5s;
 }
 
-nav.menu-lateral:hover{
+nav.menu-lateral.expandir{
     width: 300px;
 }
 
