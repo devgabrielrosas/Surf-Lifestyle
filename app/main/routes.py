@@ -4,6 +4,7 @@ from . import main
 
 @main.route('/')
 def index():
+    posts = current_app.posts
     return render_template('index.html')
 
 @main.route('/nosso_blog')
