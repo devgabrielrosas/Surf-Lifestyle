@@ -28,10 +28,14 @@ h2{
     margin: 10px 0;
 }
 
-p{
+.container p{
     font-size: 18px;
     color: #777;
     margin-bottom: 30px;
+}
+
+#txt{
+    margin-bottom: 15px;
 }
 
 .btn{

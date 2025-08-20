@@ -87,8 +87,10 @@ section{
         & .caixa__quem-somos{
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
             padding: 20px 10px;
             border-radius: 10px;
+            gap: 30px;
             & img{
                 border-radius: 10px;
             }
@@ -96,6 +98,7 @@ section{
         & p{
             align-self: center;
             color: var(--text-light-bg);
+            min-width: 400px;
             width: 60%;
             text-align: start;
             font-size: 20px;
@@ -119,7 +122,7 @@ section{
         & .convite{
             color: var(--text-dark-bg);
         }
-        & .secao-iframe{
+        & .secao-comece{
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -131,19 +134,22 @@ section{
             & iframe{
                 width: 100%;
             }
-            & .caixa__secao-iframe{
+            & .caixa__secao-comece{
                 display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
                 padding: 0px 6% 50px 6%;
             }
             & article{
                 display: flex;
                 flex-direction: column;
+                max-width: 700px;
                 padding: 20px;
                 & h3{
                     font-size: 2.2em;
                 }
                 & p{
-                    font-size: 26px;
+                    font-size: 24px;
                     min-width: 500px;
                     width: 100%;
                     margin-bottom: 20px;
@@ -161,6 +167,8 @@ section{
                     text-decoration: none;
                     text-transform: none;
                     color: var(--text-light);
+                    transition: 0.3s;
+
                 }
                 & .button:hover{
                     transform: scale(1.04);
@@ -172,6 +180,7 @@ section{
                 display: grid;
                 grid-template-columns: repeat(2, minmax(0, 1fr));
                 gap: 15px;
+                width: 600px;
                 & img{
                     object-fit: cover;
                     aspect-ratio: 1 / 1;
