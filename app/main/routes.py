@@ -6,3 +6,6 @@ from . import main
 def index():
     return render_template('index.html')
 
+@main.route('/nosso_blog')
+def pagina_historia():
+    return render_template('nosso_blog.html')
