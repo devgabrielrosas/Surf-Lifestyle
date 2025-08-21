@@ -18,3 +18,7 @@ def politica_privacidade():
 @main.route('/prancha')
 def prancha():
     return render_template('prancha.html')
+
+@main.route('/historia')
+def historia():
+    return render_template('historia.html')

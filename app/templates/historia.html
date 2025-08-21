@@ -5,5 +5,56 @@
 {% endblock %}
 
 {% block content %}
-<h1>Historia</h1>
+
+ <header class="site-header">
+    <h1>História do Surf</h1>
+  </header>
+
+  <main class="container">
+    <!-- ✅ Seção da história (fica no topo) -->
+    <section id="historia" class="historia">
+      <h2>A História do surf: Das raizes antigas às ondas modernas</h2>
+      <p>
+        O Surf é uma prática milenar que se originou em diversas culturas costeiras ao redor do mundo, muito antes da popularização que conhecemos hoje. Embora seja difícil datar com precisão o início dessa atividade, algumas evidências arqueológicas apontam para a existência do Surf há milhares de anos atrás. Vamos embarcar em uma jornada através do tempo, para explorar as raízes antigas e a evolução do Surf até se tornar um fenômeno global.
+      </p>
+
+      <br>
+      <img class="imagem_historia" src="../static/imagens/Antigos-surfando.jpg" alt="">
+      <br>
+
+      <h2>As Origens Primitivas</h2>
+      <p>As primeiras evidências do Surf remontam a povos polinésios, como os havaianos, samoanos e tahitianos, que possivelmente praticavam o Surf por volta de 1500 a.C. Para essas civilizações, o Surf não era apenas um esporte, mas uma parte intrínseca de suas tradições culturais e espirituais. As pranchas eram esculpidas à mão a partir de madeira de árvores nativas, e o Surf era frequentemente associado a rituais religiosos e festivais.Talvez ainda antes dos polinésios, no litoral do Peru, os povos antigos surfavam com uma espécie de canoa, ou prancha feita com junco, os famosos Caballitos de Totora. Muitos afirmam que esse é o primeiro registro de Surf que se conhece.</p>
+
+      <br>
+      <img class="imagem_historia" src="../static/imagens/Duke-surfando.jpg" alt="">
+      <br>
+    </section>
+
+    <section id="catalogo">
+      <h2>Maiores Surfistas</h2>
+
+      <div class="surfistas">
+        <article class="surfista" data-id="kelly">
+          <img src="../static/imagens/kelly.jpeg" alt="Kelly Slater" />
+          <button class="nome" type="button">Kelly Slater</button>
+          <div class="info" aria-hidden="true"></div>
+        </article>
+
+        <article class="surfista" data-id="gabriel">
+          <img src="../static/imagens/medina.jpeg" alt="Gabriel Medina" />
+          <button class="nome" type="button">Gabriel Medina</button>
+          <div class="info" aria-hidden="true"></div>
+        </article>
+
+        <article class="surfista" data-id="layne">
+          <img src="../static/imagens/layne.jpeg" alt="Layne Beachley" />
+          <button class="nome" type="button">Layne Beachley</button>
+          <div class="info" aria-hidden="true"></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+<script src="{{ url_for('static', filename='scripts/historia.js') }}"></script>
+
 {% endblock %}
