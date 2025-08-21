@@ -49,6 +49,8 @@ section h2 { margin: 0 0 12px; }
 }
 
 .surfistas{
+    position: relative;
+    z-index: 1;
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
