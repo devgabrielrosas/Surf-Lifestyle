@@ -10,3 +10,7 @@ def index():
 @main.route('/nosso_blog')
 def pagina_historia():
     return render_template('nosso_blog.html')
+
+@main.route('/politica_privacidade')
+def politica_privacidade():
+    return render_template('politica_privacidade.html')

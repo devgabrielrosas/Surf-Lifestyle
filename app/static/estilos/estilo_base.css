@@ -40,6 +40,7 @@ main {
     & .links-rodape a{
         padding: 10px;
         align-self: flex-end;
+        text-wrap: nowrap;
         font-size: 14px;
         font-weight: 300;
         text-transform: none;
