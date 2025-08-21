@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='estilos/prancha.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Sua prancha ideal é: <span class="highlight">{{ prancha }}</span>!</h1>
+    <h2>Pontuação:</h2>
+    <ul>
+        {% for tipo, pontos in pontos.items() %}
+            <li>{{ tipo }}: {{ pontos }}</li>
+        {% endfor %}
+    </ul>
+    <!-- <a href="prancha">Voltar</a> -->
+     <form><input type="submit" value="Voltar" formaction="prancha" id="voltar"></form>
+</div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='estilos/prancha.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Descubra sua prancha ideal</h1>
+    <form method="POST" action="{{ url_for('main.prancha') }}">
+        
+        <label for="nivel">Qual o seu nível de surf?</label>
+        <select name="nivel" id="nivel" required>
+            <option value="iniciante">Iniciante</option>
+            <option value="intermediario">Intermediário</option>
+            <option value="avancado">Avançado</option>
+        </select>
+
+        <label for="peso">Qual o seu peso?</label>
+        <select name="peso" id="peso" required>
+            <option value="baixo">Menos de 60kg</option>
+            <option value="medio">60-80kg</option>
+            <option value="alto">Mais de 80kg</option>
+        </select>
+
+        <label for="altura">Qual a sua altura?</label>
+        <select name="altura" id="altura" required>
+            <option value="baixo">Menos de 1,65m</option>
+            <option value="medio">1,65m - 1,80m</option>
+            <option value="alto">Mais de 1,80m</option>
+        </select>
+
+        <label for="ondas">Qual tipo de onda você costuma pegar?</label>
+        <select name="ondas" id="ondas" required>
+            <option value="pequenas">Pequenas</option>
+            <option value="medias">Médias</option>
+            <option value="grandes">Grandes</option>
+        </select>
+
+        <label for="objetivo">Qual o seu objetivo principal?</label>
+        <select name="objetivo" id="objetivo" required>
+            <option value="aprendizado">Aprendizado</option>
+            <option value="manobras">Manobras</option>
+            <option value="velocidade">Velocidade</option>
+            <option value="tubo">Entrar em tubos</option>
+        </select>
+
+        <button type="submit" class="button">Descobrir prancha ideal</button>
+    </form>
+</div>
+{% endblock %}
