@@ -1,0 +1,115 @@
+:root{
+  --azul: #0077b6;
+  --azul-claro: #e0f7fa;
+  --bg: #f0f8ff;
+  --texto: #333;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--texto);
+}
+
+/* Header */
+
+.site-header{
+    background: var(--azul);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+}
+
+section { margin-bottom: 28px; }
+section h2 { margin: 0 0 12px; }
+
+.imagem_historia{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 3px solid rgb(119, 118, 118);
+}
+
+.historia{
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.surfistas{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.surfista{
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform .15s ease;
+}
+
+.surfista:hover { transform: translateY(-2px); }
+
+.surfista img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 3px solid var(--azul);
+}
+
+/* Botão/titulo que clica */
+
+.nome{
+    width: 100%;
+    border: 0;
+    background: var(--azul-claro);
+    font-weight: 700;
+    padding: 10px 12px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.nome:focus { outline: 2px solid var(--azul); outline-offset: -2px; }
+
+.info{
+    display: none;
+    padding: 14px 16px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    animation: aparecer .25s ease;
+    border-top: 1px dashed #cde7ea;
+}
+
+/* quando o card estiver "aberto" */
+.surfista.aberto .info {
+  display: block;
+}
+
+@keyframes aparecer{
+    from{opacity: 0; transform: translateY(8px);}
+    to{ opacity: 0; transform: translateY(0); }
+}
+
+/* Responsividade suave */
+@media (min-width: 768px) {
+  .surfista img { height: 200px; }
+}
+
+@media (min-width: 1024px) {
+  .surfista img { height: 220px; }
+}

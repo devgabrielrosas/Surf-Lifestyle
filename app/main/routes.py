@@ -14,3 +14,7 @@ def pagina_historia():
 @main.route('/politica_privacidade')
 def politica_privacidade():
     return render_template('politica_privacidade.html')
+
+@main.route('/historia')
+def historia():
+    return render_template('historia.html')
