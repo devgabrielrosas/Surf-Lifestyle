@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='estilos/previsao.css') }}">
+
+{% endblock %}
+
+{% block content %}
+  <h1>🌊 Previsão da Praia de Intermares</h1>
+
+  {% if previsao %}
+    <div class="card">
+      <p><strong>Altura da Maré:</strong> {{ previsao.waveHeight.noaa }} m</p>
+      <p><strong>Temperatura da Água:</strong> {{ previsao.waterTemperature.noaa }} °C</p>
+      <p><strong>Vento:</strong> {{ previsao.windSpeed.noaa }} m/s ({{ previsao.windDirection.noaa }}°)</p>
+    </div>
+  {% else %}
+    <p>❌ Não foi possível carregar a previsão agora.</p>
+  {% endif %}
+{% endblock %}
