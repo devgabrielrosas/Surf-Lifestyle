@@ -1,12 +1,10 @@
 
-/* Cabeçalho secundário */
-
-
 .caixa-principal{
     box-shadow: 1px 1px 5px inset var(--default-black);
-    height: 100dvh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: var(--bg-main);
     background-image: url("../imagens/foto-medina-fundo.png");
@@ -14,45 +12,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    & header{
-        width: 100%;
-        min-height: 110px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-
-        & .logo{
-            height: 55px;
-        }
-        & nav{
-            width: 400px;
-            gap: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            margin-right: 20px;
-            & img#navegacao__menu{
-                    height: 40px;
-                    cursor: pointer;
-                }
-            & a{
-                color: var(--text-light);
-                flex-wrap: nowrap;
-                white-space: nowrap;
-                font-size: 20px;
-                text-decoration: none;
-                text-transform: none;
-                font-weight: 500;
-            }
-            & a:hover{
-                color: #ffffffb2;
-                transform: scale(1.05);
-                cursor: pointer;
-            }
-        }
-    }
+    
     & .frase-efeito{
         background-image: url("../imagens/frase-efeito.png");
         background-position: center;
