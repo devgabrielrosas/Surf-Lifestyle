@@ -11,17 +11,11 @@
 <body>
     <header id="header">
         <a href="/"><img class="logo" id="logo" src="{{ url_for('static', filename='imagens/logo.png') }}" alt="Logo Surf Lifestyle"></a>
-        <!-- <nav class="nav_pai"> -->
         <i class="bi bi-list" id="btn-exp"></i>
-            <!-- <a href="nosso_blog">Nosso blog</a>
-            <a href="historia">História</a>
-            <a href="pervisao">Previsão</a>
-            <a href="#sobre">Sobre</a> -->
-        <!-- </nav> -->
     </header>
     <nav class="menu-lateral">
-
-        <ul>
+        <ul class="base">
+            <i class="bi bi-list" id="btn-close"></i>
             <li class="item-menu">
                 <a href="/">
                     <span class="icon"><i class="bi bi-house-door"></i></span>
@@ -42,13 +36,13 @@
             </li>
             <li class="item-menu">
                 <a href="previsao">
-                    <span class="icon"><i class="bi bi-gear"></i></span>
+                    <span class="icon"><i class="bi bi-brightness-alt-high-fill"></i></span>
                     <span class="txt-link">Previsão</span>
                 </a>
             </li>
             <li class="item-menu">
                 <a href="prancha">
-                    <span class="icon"><i class="bi bi-person-circle"></i></span>
+                    <span class="icon"><i class="bi bi-clipboard2-fill"></i></span>
                     <span class="txt-link">Sua Prancha</span>
                 </a>
             </li>

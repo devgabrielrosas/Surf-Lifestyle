@@ -22,12 +22,14 @@ menuItem.forEach((item) =>
 
 
 // expandir o menu
-var btnExp = document.querySelector('#btn-exp')
+var btnExp = document.getElementById('btn-exp')
+var btnClose = document.getElementById('btn-close')
 var menuSite = document.querySelector('.menu-lateral')
 
 btnExp.addEventListener('click', function (e) {
     e.stopPropagation() // não fechar ao clicar no botão
     menuSite.classList.toggle('expandir')
+    window.btnExp.style.display="none"
 })
 
 // fechar ao clicar fora do menu
@@ -36,5 +38,13 @@ document.addEventListener('click', function (e) {
         !menuSite.contains(e.target) && 
         e.target !== btnExp) {
         menuSite.classList.remove('expandir')
+        setTimeout(function () {btnExp.style.display = "block"}, 300);
+    }
+})
+document.addEventListener('click', function (e) {
+    if (menuSite.classList.contains('expandir') && 
+        e.target == btnClose) {
+        menuSite.classList.remove('expandir')
+        setTimeout(function () {btnExp.style.display = "block"}, 300);
     }
 })
