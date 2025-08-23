@@ -8,6 +8,18 @@ body{
     overflow-y: scroll;
 }
 
+.site-header{
+    background: #015871;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+}
+
+.site-header h1{
+    font-size: 50px;
+    color: #fff;
+}
+
 /* container centralizado (estilo solicitado) */
 .container{
     position: relative; /*Posiciona em relação à tela*/
