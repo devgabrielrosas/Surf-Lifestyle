@@ -1,13 +1,10 @@
-body {
-    overflow: hidden;
-}
 
 .container { 
     background: white;
     z-index: 1;
     padding: 20px;
     border-radius: 10px;
-    min-width: 450px;
+    min-width: 350px;
     width: 35%;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     margin: auto;
@@ -29,13 +26,22 @@ h2 {
     text-align: center;
     color: #00796b;
 }
+p{
+    padding: 10px;
+}
 
 label {
     display: block;
     margin-top: 15px;
     font-weight: 600;
 }
-
+select{
+    border-radius: 5px;
+    transition: 0.05s;
+}
+select:hover{
+    outline: 2px solid black;
+}
 .highlight {
     color: #00796b;
 }
@@ -59,7 +65,7 @@ button, #voltar {
     transition: 0.3s ease;
 }
 
-button:hover {
+button:hover, #voltar:hover {
     transform: scale(1.03);
     background: #004d40;
 }
