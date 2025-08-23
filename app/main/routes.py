@@ -50,3 +50,7 @@ def previsao():
 
     # Envia os dados para o HTML
     return render_template("previsao.html", previsao=previsao)
+
+@main.route('/agenda')
+def agenda():
+    return render_template('agenda.html')
