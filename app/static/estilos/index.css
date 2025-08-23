@@ -1,12 +1,10 @@
 
-/* Cabeçalho secundário */
-
-
 .caixa-principal{
     box-shadow: 1px 1px 5px inset var(--default-black);
-    height: 100dvh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: var(--bg-main);
     background-image: url("../imagens/foto-medina-fundo.png");
@@ -14,51 +12,16 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    & header{
-        width: 100%;
-        min-height: 110px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-
-        & .logo{
-            height: 55px;
-        }
-        & nav{
-            width: 400px;
-            gap: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            margin-right: 20px;
-            & img#navegacao__menu{
-                    height: 40px;
-                    cursor: pointer;
-                }
-            & a{
-                color: var(--text-light);
-                flex-wrap: nowrap;
-                white-space: nowrap;
-                font-size: 20px;
-                text-decoration: none;
-                text-transform: none;
-                font-weight: 500;
-            }
-            & a:hover{
-                color: #ffffffb2;
-                transform: scale(1.05);
-                cursor: pointer;
-            }
-        }
-    }
+    
     & .frase-efeito{
         background-image: url("../imagens/frase-efeito.png");
         background-position: center;
         background-repeat: no-repeat;
         height: 50dvh;
         width: 100dvw;
+        opacity: 0;
+        animation: fadeIn 0.8s ease forwards;
+        animation-delay: 0.2s;
     }
 }
 
@@ -83,11 +46,13 @@ section{
         align-items: baseline;
         padding: 0px 6% 50px 6%;
         background-color: var(--gradient-start);
-        
+        opacity: 0;
+        animation: fadeIn 0.8s ease forwards;
+        animation-delay: 0.2s;
         & .caixa__quem-somos{
             display: flex;
             justify-content: space-around;
-            flex-wrap: wrap;
+            /* flex-wrap: wrap; */
             padding: 20px 10px;
             border-radius: 10px;
             gap: 30px;
@@ -98,7 +63,7 @@ section{
         & p{
             align-self: center;
             color: var(--text-light-bg);
-            min-width: 400px;
+            min-width: 450px;
             width: 60%;
             text-align: start;
             font-size: 20px;
@@ -119,6 +84,9 @@ section{
         align-items: center;
         padding-bottom: 210px;
         color: var(--text-dark-bg);
+        opacity: 0;
+        animation: fadeIn 0.8s ease forwards;
+        animation-delay: 0.2s;
         & .convite{
             color: var(--text-dark-bg);
         }
@@ -136,7 +104,7 @@ section{
             }
             & .caixa__secao-comece{
                 display: flex;
-                flex-wrap: wrap;
+                /* flex-wrap: wrap; */
                 justify-content: center;
                 padding: 0px 6% 50px 6%;
             }
@@ -150,7 +118,7 @@ section{
                 }
                 & p{
                     font-size: 24px;
-                    min-width: 500px;
+                    min-width: 450px;
                     width: 100%;
                     margin-bottom: 20px;
                     color: var(--text-light-bg);
@@ -180,7 +148,7 @@ section{
                 display: grid;
                 grid-template-columns: repeat(2, minmax(0, 1fr));
                 gap: 15px;
-                width: 600px;
+                max-width: 600px;
                 & img{
                     object-fit: cover;
                     aspect-ratio: 1 / 1;
@@ -202,4 +170,5 @@ section{
         }
     }
 }
+
 

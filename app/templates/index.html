@@ -7,18 +7,10 @@
 
 {% block content %}
 <main class="caixa-principal">
-    <header>
-        <a href=""><img class="logo" id="logo" src="{{ url_for('static', filename='imagens/logo.png') }}" alt="Logo Surf Lifestyle"></a>
-        <nav>
-            <a href="#quem-somos">Quem somos</a>
-            <a href="#comece-hoje">Comece Hoje</a>
-            <a href="#sobre">Sobre</a>
-        </nav>
-    </header>
         <div class="frase-efeito"></div>
 </main>
 <section>
-    <div class="quem-somos" id="quem-somos">
+    <div class="quem-somos">
         <h1>Quem Somos</h1>
         <div class="caixa__quem-somos">
             <p>
@@ -55,8 +47,6 @@
                     </p>
                     <p>E se ainda não sabe nada do que estamos falando, te convido a <strong>conhecer o surf</strong> através do nosso blog.</p>
                     <a href="nosso_blog" class="button">Vem de Surfing</a>
-                    <p>Ou se quiser saber qual sua <strong>prancha ideal</strong> de acordo com seu corpo e seu <strong>estilo de surf</strong>:</p>
-                    <a href="prancha" class="button">Sua prancha</a>
                 </article>
                 <div class="espaco-fotos">
                     <img src="{{ url_for('static', filename='imagens/espaco-foto.jpg') }}" alt="">

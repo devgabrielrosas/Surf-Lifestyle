@@ -4,14 +4,55 @@
     <title>{% block title %}Surf Lifestyle{% endblock %}</title>
     <link rel="shortcut icon" href="{{ url_for('static', filename='imagens/onda_icone_logo.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static', filename='estilos/estilo_base.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <!-- ESTILO GERAL DA BASE -->
     {% block styles %}{% endblock %} <!-- ESTILOS ADICIONAIS DE PÁGINAS -->
 </head>
 <body>
-    <main>
+    <header id="header">
+        <a href="/"><img class="logo" id="logo" src="{{ url_for('static', filename='imagens/logo.png') }}" alt="Logo Surf Lifestyle"></a>
+        <i class="bi bi-list" id="btn-exp"></i>
+    </header>
+    <nav class="menu-lateral">
+        <ul class="base">
+            <i class="bi bi-list" id="btn-close"></i>
+            <li class="item-menu">
+                <a href="/">
+                    <span class="icon"><i class="bi bi-house-door"></i></span>
+                    <span class="txt-link">Início</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="historia">
+                    <span class="icon"><i class="bi bi-columns-gap"></i></span>
+                    <span class="txt-link">História</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="agenda">
+                    <span class="icon"><i class="bi bi-calendar-event"></i></span>
+                    <span class="txt-link">Agenda</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="previsao">
+                    <span class="icon"><i class="bi bi-brightness-alt-high-fill"></i></span>
+                    <span class="txt-link">Previsão</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="prancha">
+                    <span class="icon"><i class="bi bi-clipboard2-fill"></i></span>
+                    <span class="txt-link">Sua Prancha</span>
+                </a>
+            </li>
+        </ul>
+
+    </nav><!--menu lateral-->
+    <div class="bloco_conteudo">
         {% block content %}
         {% endblock %}
-    </main>
+    </div>
     
     <footer id="sobre">
         <div class="ocean">
@@ -36,6 +77,6 @@
 
         </div>
     </footer>
-    <script src="{{ url_for('static', filename='scripts/scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/base.js') }}"></script>
 </body>
 </html>
