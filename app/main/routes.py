@@ -28,7 +28,7 @@ def previsao():
     # Coordenadas da praia de Intermares (João Pessoa - PB)
     lat, lng = -7.0596, -34.8372  
     
-    # Sua chave da API (coloque no .env por segurança)
+    # Chave da API (coloque no .env por segurança)
     api_key = os.getenv("STORMGLASS_API_KEY")
     
     # URL da API pedindo altura da onda, temp. da água, vento
