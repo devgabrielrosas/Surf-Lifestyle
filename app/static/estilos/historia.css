@@ -5,12 +5,7 @@
   --texto: #333;
 }
 
-*{
-    box-sizing: border-box;
-}
-
 body{
-    margin: 0;
     background: var(--bg);
     color: var(--texto);
 }
@@ -21,7 +16,7 @@ body{
     background: #015871;
     color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 12px;
 }
 
 .site-header h1{
@@ -110,7 +105,7 @@ section h2 { margin: 0 0 12px; }
   display: block;
 }
 
-.frase-efeito {
+.texto-efeito {
   text-align: center; 
   font-size: 1.8rem;         
   font-weight: bold;         
