@@ -1,7 +1,7 @@
 :root{
   --azul: #0077b6;
   --azul-claro: #e0f7fa;
-  --bg: #f0f8ff;
+  --bg: #C5F2F8;
   --texto: #333;
 }
 
@@ -45,64 +45,63 @@ section h2 { margin: 0 0 12px; }
 }
 
 .historia{
-    background: #ffffff;
+    background: rgb(251, 235, 207);
     border-radius: 12px;
     padding: 16px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 10px;
 }
 
-.surfistas{
-    position: relative;
-    z-index: 1;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+/* Seção surfistas */
+#surfistas-2025 {
+  padding: 50px 20px;
+  background: var(--bg);
 }
 
-.surfista{
-    background: #fff;
-    border-radius: 14px;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-    overflow: hidden;
-    transition: transform .15s ease;
+#surfistas-2025 h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--texto);
 }
 
-.surfista:hover { transform: translateY(-2px); }
-
-.surfista img{
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-    border-bottom: 3px solid var(--azul);
+.surfistas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
 }
 
-/* Botão/titulo que clica */
-
-.nome{
-    width: 100%;
-    border: 0;
-    background: var(--azul-claro);
-    font-weight: 700;
-    padding: 10px 12px;
-    cursor: pointer;
-    text-align: center;
+.surfista {
+  background: var(--azul-claro);
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease;
 }
 
-.nome:focus { outline: 2px solid var(--azul); outline-offset: -2px; }
-
-.info{
-    display: none;
-    padding: 14px 16px;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    animation: aparecer .25s ease;
-    border-top: 1px dashed #cde7ea;
+.surfista:hover {
+  transform: translateY(-5px);
 }
 
-/* quando o card estiver "aberto" */
-.surfista.aberto .info {
-  display: block;
+.surfista img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.surfista .conteudo {
+  padding: 20px;
+}
+
+.surfista h3 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: var(--texto);
+}
+
+.surfista p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
 .texto-efeito {
