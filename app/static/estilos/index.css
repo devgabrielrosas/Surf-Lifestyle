@@ -172,3 +172,20 @@ section{
 }
 
 
+.mensagem-success {
+    color:#0b6b3d;
+    padding: 5px;
+    margin-bottom: 10px;
+    border:1px solid rgba(11,107,61,0.08); 
+    background: #e8ffef;
+}
+.mensagem-error {
+    color: #9b1b1b;
+    background: #ffe6e6;
+    margin-bottom: 10px;
+    border:1px solid rgba(155,27,27,0.08);
+    padding: 5px;
+}
+
+/* .flash.error { background: #ffe6e6; color:#9b1b1b; border:1px solid rgba(155,27,27,0.08); }
+.flash.success { background: #e8ffef; color:#0b6b3d; border:1px solid rgba(11,107,61,0.08); }

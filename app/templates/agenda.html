@@ -8,6 +8,21 @@
 <header class="site-header">
     <h1>Agendamento de aula de surf</h1>
   </header>
+
+<div class="card">
+  <h1>🌊 Previsão da Praia de Intermares</h1>
+
+  {% if previsao %}
+    <div class="card">
+      <p><strong>Altura da Maré:</strong> {{ previsao.waveHeight.noaa }} m</p>
+      <p><strong>Temperatura da Água:</strong> {{ previsao.waterTemperature.noaa }} °C</p>
+      <p><strong>Vento:</strong> {{ previsao.windSpeed.noaa }} m/s ({{ previsao.windDirection.noaa }}°)</p>
+    </div>
+  {% else %}
+    <p>❌ Não foi possível carregar a previsão agora.</p> 
+  {% endif %}
+</div>
+
 <div class="container" role="main" aria-labelledby="agendar-title">
     <h1 id="agendar-title">Agendamento</h1>
     <h2>Aulas de surf — Praia de Intermares</h2>
@@ -25,53 +40,36 @@
       {% endif %}
     {% endwith %}
 
-    <form action="{{ url_for('main.agenda') }}" method="post" class="form" autocomplete="off">
-        <label for="name">Seu nome</label>
-        <input id="name" name="name" type="text" placeholder="Nome completo" required>
+  <form action="{{ url_for('main.agenda') }}" method="post" class="form" autocomplete="off">
+      <label for="nome">Seu nome</label>
+      <input id="nome" name="nome" type="text" placeholder="Nome completo" required>
 
-        <label for="phone">Telefone</label>
-        <input id="phone" name="phone" type="text" placeholder="(xx) 9xxxx-xxxx" required>
+      <label for="telefone">Telefone</label>
+      <input id="telefone" name="telefone" type="text" placeholder="(xx) 9xxxx-xxxx" required>
 
-        <label for="date">Escolha a data</label>
-        <input id="date" name="date" type="date" {% if min_date %} min="{{ min_date }}" {% endif %} required>
+      <label for="data">Escolha a data</label>
+      <input id="data" name="data" type="date" {% if min_date %} min="{{ min_date }}" {% endif %} required>
 
-        <fieldset class="times" aria-label="Horários disponíveis">
-            <legend>Horários disponíveis</legend>
+      <fieldset class="times" aria-label="Horários disponíveis">
+          <h2>Horários disponíveis</h2>
 
-            <div class="slots">
-                <input id="slot-07-00" name="time_slot" type="radio" value="07:00" required>
-                <label for="slot-07-00" class="slot">07:00</label>
-                
-                <input id="slot-08-00" name="time_slot" type="radio" value="08:00" required>
-                <label for="slot-08-00" class="slot">08:00</label>
+          <div class="slots">
+              {% for h in horarios %}
+                  <input id="slot-{{ h|replace(':','-') }}" name="horario" type="radio" value="{{ h }}" {% if loop.first %}required{% endif %}>
+                  <label for="slot-{{ h|replace(':','-') }}" class="slot">{{ h }}</label>
+              {% endfor %}
 
-                <input id="slot-09-00" name="time_slot" type="radio" value="09:00">
-                <label for="slot-09-00" class="slot">09:00</label>
+          </div>
+      </fieldset>
 
-                <input id="slot-10-00" name="time_slot" type="radio" value="10:00">
-                <label for="slot-10-00" class="slot">10:00</label>
+      <div class="actions">
+          <button type="submit" class="btn">Agendar</button>
+          <button type="reset" class="btn btn-ghost">Limpar</button>
+      </div>
 
-                <input id="slot-11-00" name="time_slot" type="radio" value="11:00">
-                <label for="slot-11-00" class="slot">11:00</label>
+      <p class="foot">Aulas em Intermares — disponibilidade sujeita à confirmação.</p>
+  </form>
 
-                <input id="slot-14-00" name="time_slot" type="radio" value="14:00">
-                <label for="slot-14-00" class="slot">14:00</label>
 
-                <input id="slot-15-00" name="time_slot" type="radio" value="15:00">
-                <label for="slot-15-00" class="slot">15:00</label>
-
-                <input id="slot-16-00" name="time_slot" type="radio" value="16:00">
-                <label for="slot-16-00" class="slot">16:00</label>
-
-            </div>
-        </fieldset>
-
-        <div class="actions">
-            <button type="submit" class="btn">Agendar</button>
-            <button type="reset" class="btn btn-ghost">Limpar</button>
-        </div>
-
-        <p class="foot">Aulas em Intermares — disponibilidade sujeita à confirmação.</p>
-    </form>
 </div>
 {% endblock %}

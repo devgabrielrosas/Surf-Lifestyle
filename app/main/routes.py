@@ -1,15 +1,12 @@
 from flask import Blueprint, request, redirect, url_for, render_template, current_app # type: ignore
 import requests, os # type: ignore
+from datetime import date, datetime
 from . import main
 
 @main.route('/')
 def index():
     posts = current_app.posts
     return render_template('index.html')
-
-@main.route('/nosso_blog')
-def pagina_historia():
-    return render_template('nosso_blog.html')
 
 @main.route('/politica_privacidade')
 def politica_privacidade():
@@ -23,8 +20,9 @@ def prancha():
 def historia():
     return render_template('historia.html')
 
-@main.route("/previsao")
-def previsao():
+"""
+@main.route('/agenda', methods=["GET", "POST"], strict_slashes=False)
+def agenda():
     # Coordenadas da praia de Intermares (João Pessoa - PB)
     lat, lng = -7.0596, -34.8372  
     
@@ -49,8 +47,4 @@ def previsao():
         previsao = {}
 
     # Envia os dados para o HTML
-    return render_template("previsao.html", previsao=previsao)
-
-@main.route('/agenda')
-def agenda():
-    return render_template('agenda.html')
+    return render_template("agenda.html", previsao=previsao)"""
