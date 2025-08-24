@@ -11,10 +11,22 @@ os.makedirs(data_dir, exist_ok=True)
 csv_path = os.path.join(data_dir, "inscricoes.csv")
 
 def inicializar_csv():
+    cabeçalho = "nome,email\n"
     """Cria o arquivo com cabeçalho se ainda não existir"""
     if not os.path.exists(csv_path):
         arq = open(csv_path, "w", encoding="utf-8")
         arq.write("nome,email\n")
+        arq.close()
+    else:
+        # verifica se o cabeçalho está presente
+        arq = open(csv_path, "r+", encoding="utf-8")
+        linhas = arq.read().splitlines()
+        if not linhas or linhas[0].strip() != "nome,email":
+            # adiciona cabeçalho na primeira linha mantendo os dados existentes
+            arq.seek(0)
+            arq.write(cabeçalho)
+            for linha in linhas:
+                arq.write(linha + "\n")
         arq.close()
 
 
@@ -70,12 +82,27 @@ def caminho_arquivo_csv(app_root=None):
     return os.path.join(pasta, "agendamento.csv")
 
 def garantir_csv_existe(app_root=None):
-    """Cria o CSV com cabeçalho se não existir."""
+    """Garante que o CSV exista e tenha cabeçalho na primeira linha."""
     caminho = caminho_arquivo_csv(app_root)
+    cabeçalho = "nome,telefone,data,hora,criado_em\n"
+
     if not os.path.exists(caminho):
+        # cria arquivo com cabeçalho
         f = open(caminho, "w", encoding="utf-8")
-        f.write("nome,telefone,data,hora,criado_em\n")
+        f.write(cabeçalho)
         f.close()
+    else:
+        # verifica se o cabeçalho está presente
+        f = open(caminho, "r+", encoding="utf-8")
+        linhas = f.read().splitlines()
+        if not linhas or linhas[0].strip() != "nome,telefone,data,hora,criado_em":
+            # adiciona cabeçalho na primeira linha mantendo os dados existentes
+            f.seek(0)
+            f.write(cabeçalho)
+            for linha in linhas:
+                f.write(linha + "\n")
+        f.close()
+    
     return caminho
 
 def ler_agendamentos(app_root=None):
