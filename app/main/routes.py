@@ -23,8 +23,8 @@ def prancha():
 def historia():
     return render_template('historia.html')
 
-@main.route("/previsao")
-def previsao():
+@main.route('/agenda')
+def agenda():
     # Coordenadas da praia de Intermares (João Pessoa - PB)
     lat, lng = -7.0596, -34.8372  
     
@@ -49,8 +49,4 @@ def previsao():
         previsao = {}
 
     # Envia os dados para o HTML
-    return render_template("previsao.html", previsao=previsao)
-
-@main.route('/agenda')
-def agenda():
-    return render_template('agenda.html')
+    return render_template("agenda.html", previsao=previsao)
