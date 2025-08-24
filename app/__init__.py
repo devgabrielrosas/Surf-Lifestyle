@@ -12,5 +12,8 @@ def create_app():
     app.secret_key = 'projeto-surf'
 
     app.register_blueprint(main_bp)
+
+    with app.app_context():
+        print(app.url_map)
     
     return app
