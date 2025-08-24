@@ -23,16 +23,14 @@ body{
 /* container centralizado (estilo solicitado) */
 .container{
     position: relative; /*Posiciona em relação à tela*/
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 4;
-    
+    margin: auto;
     background: linear-gradient(180deg, #fffdf9, #fff8f0);
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 8px 30px rgba(0,0,0,0.12);
     width: min(880px, 92vw);
+    margin-top: 20px;
 }
 
 /* Títulos grandes (estilo sugerido) */
@@ -171,6 +169,7 @@ input[type="time"]{
 .btn:hover{
     background-color: #005fa3;
     transform: translateY(-2px);
+    color: white;
 }
 
 .btn-ghost{
