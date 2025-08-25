@@ -12,8 +12,8 @@ html{
 }
 body{
     min-height: 100dvh;
-    overflow-x: hidden;
     position: relative;
+    overflow-x: hidden;
     background-color: var(--text-light-bg);
     font-family: var(--font-titles);
     display: flex;
@@ -28,19 +28,34 @@ body{
 
 /* CABEÇALHO */
 #header{
-    z-index: 400;
+    z-index: 900;
     width: 100%;
     max-height: 130px;
     position: fixed;
     display: flex;
+    background-color: var(--bg-header);
     justify-content: space-between;
     align-items: center;
-    margin: 10px;
     padding: 10px;
     transition: 0.5s;
     & .logo{
-        height: 40px;
+        height: 45px;
     }
+}
+
+#logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    text-transform: none;
+    color: var(--text-light);
+    gap: 5px;
+}
+
+#logo p{
+    font-family: var(--font-cool);
+    font-size: 17px;
 }
 
 
@@ -49,7 +64,7 @@ body{
     width: 98% !important;
     top: 0;
     margin: 0.5rem 0 0 0.5rem !important;
-    background: #0065724d;
+    background: #0065728c;
     border-radius: 1rem;
     box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(0.2125rem);
@@ -57,7 +72,9 @@ body{
 }
 
 /* FIM CABEÇALHO */
-
+#inicio{
+    margin-top: 10px;
+}
 i#btn-exp, i#btn-close{
     z-index: 1000;
     margin-right: 30px;
@@ -70,7 +87,7 @@ i#btn-exp:hover, i#btn-close:hover{
 }
 
 i#btn-close{
-    margin-bottom: 0px;
+    margin-bottom: 100px;
 }
 
 /* MENU LATERAL */
@@ -81,8 +98,7 @@ nav.menu-lateral{
     background-color: #006572;
     padding: 28px 0 40px 1% ;
     box-shadow: 3px 0 0 #002922;
-
-    z-index: 500;
+    z-index: 901;
     top: 0;
     left: 100%;
     overflow: hidden;
@@ -90,7 +106,7 @@ nav.menu-lateral{
 }
 
 nav.menu-lateral.expandir{
-    z-index: 500;
+    z-index: 901;
     width: 300px;
     left: calc(100% - 300px);
 }
@@ -132,20 +148,24 @@ ul li.item-menu a .icon > i{
     margin-left: 10px;
 }
 /* FIM MENU LATERAL */
+
 .bloco_conteudo {
     flex: 1;
+    margin: 80px 0 150px 0;
 }
 
 .sobre__caixa_pai{
     background-color: #015871;
     display: flex;
     justify-content: space-between;
+    gap: 10px;
+    padding: 0 10px;
     & .links-rodape{
         display: flex;
         align-items: flex-end;
+        gap: 10px;
     }
     & .links-rodape a{
-        padding: 10px;
         align-self: flex-end;
         text-wrap: nowrap;
         font-size: 14px;
@@ -158,6 +178,11 @@ ul li.item-menu a .icon > i{
         text-decoration: underline;
     }
 }
+
+#sobre{
+    overflow-x: cover;
+}
+
 .sobre__caixa{
     background-color: #015871;
     display: flex;
@@ -171,7 +196,7 @@ ul li.item-menu a .icon > i{
     }
 
     & .caixa__logo{
-        z-index: 3;
+        z-index: 50;
         display: flex;
         align-items: center;
         justify-content: center;

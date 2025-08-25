@@ -1,15 +1,18 @@
 
 .container { 
-    background: white;
+    background: var(--branco-less);
     z-index: 1;
     padding: 20px;
     border-radius: 10px;
     min-width: 350px;
-    width: 35%;
+    width: min(880px, 92vw);
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     margin: auto;
-    margin-top: 70px;
     position: relative;
+    color: var(--text-blue);
+}
+#resultado{
+    color: var(--black-default);
 }
 form{
     display: flex;
@@ -26,14 +29,15 @@ h2 {
     text-align: center;
     color: #00796b;
 }
-p{
+label p{
     padding: 10px;
 }
 
 label {
     display: block;
     margin-top: 15px;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 18px;
 }
 select{
     border-radius: 5px;
@@ -70,7 +74,15 @@ button:hover, #voltar:hover {
     background: #004d40;
 }
 
-a{
+a {
     text-decoration: none;
     color: white
+}
+
+li {
+    text-align: center;
+}
+
+.pontuacao {
+    list-style-type: none;
 }

@@ -1,0 +1,133 @@
+
+body{
+    color: var(--texto);
+}
+
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+}
+
+section { margin-bottom: 28px; }
+section h2 { margin: 0 0 12px; }
+
+.imagens-lado-a-lado {
+  display: flex;            /* coloca uma do lado da outra */
+  gap: 10px;                /* espaço entre elas */
+  justify-content: center;  /* centraliza no meio da tela */
+  margin-top: 15px;
+}
+
+.imagens-lado-a-lado img {
+  width: 45%;    /* cada imagem ocupa metade (menos o gap) */
+  border-radius: 8px; /* borda arredondada opcional */
+}
+
+.historia{
+  background: linear-gradient(180deg, #fffdf9, #fff8f0);
+  border-radius: 12px;
+  padding: 1em 2em;
+  box-shadow: 0 4px 10px;
+  color: var(--default-black);
+}
+
+.historia h1{
+  text-align: center;
+  margin-top: 15px;
+  font-size: 2.3rem;
+  color: var(--texto);
+}
+
+.historia h2{
+  text-indent: 20px;
+  color: var(--text-blue);
+  font-size: 1.6em;
+}
+
+.texto-efeito {
+  text-align: center; 
+  font-size: 1.4rem;         
+  font-weight: bold;         
+  font-style: italic;        
+  line-height: 1.4;
+  width: 70%;          
+  max-width: 900px;          
+  margin: 50px auto;         
+  padding: 16px;             
+  color: var(--text-blue);           
+  background: #f0f8ff;       
+  border-left: 6px solid var(--text-blue); 
+  border-radius: 10px;       
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Seção surfistas */
+#surfistas-2025 {
+  border-radius: 12px;
+  padding: 50px 20px;
+  background: linear-gradient(180deg, #fffdf9, #fff8f0);
+}
+
+#surfistas-2025 h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--texto);
+}
+
+.surfistas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.surfista {
+  background: var(--azul-claro);
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.surfista:hover {
+  transform: translateY(-5px);
+}
+
+.surfista img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.surfista .conteudo {
+  padding: 20px;
+}
+
+.surfista h3 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: var(--texto);
+}
+
+.surfista p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+
+@keyframes aparecer{
+    from{opacity: 0; transform: translateY(8px);}
+    to{ opacity: 0; transform: translateY(0); }
+}
+
+/* Responsividade suave */
+@media (min-width: 768px) {
+  .surfista img { height: 200px; }
+}
+
+@media (min-width: 1024px) {
+  .surfista img { height: 220px; }
+}

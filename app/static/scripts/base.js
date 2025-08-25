@@ -1,6 +1,6 @@
 window.addEventListener('scroll', () => {
   const header = document.getElementById('header');
-  if (window.scrollY > 200) { 
+  if (window.scrollY > 80) { 
     header.classList.add('show');
   } else {
     header.classList.remove('show');

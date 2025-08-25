@@ -5,15 +5,12 @@
 {% endblock %}
 
 {% block content %}
-<header class="site-header">
-    <h1>Agendamento de aula de surf</h1>
-  </header>
 
 <div class="card">
-  <h1>🌊 Previsão da Praia de Intermares</h1>
+  <h1>🌊 Condições de Surf da Praia de Intermares</h1>
 
   {% if previsao %}
-    <div class="card">
+    <div class="previsao">
       <p><strong>Altura da Maré:</strong> {{ previsao.waveHeight.noaa }} m</p>
       <p><strong>Temperatura da Água:</strong> {{ previsao.waterTemperature.noaa }} °C</p>
       <p><strong>Vento:</strong> {{ previsao.windSpeed.noaa }} m/s ({{ previsao.windDirection.noaa }}°)</p>
