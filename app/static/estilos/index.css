@@ -1,4 +1,10 @@
-
+#header{
+    background-color: transparent;
+    margin: 10px;
+}
+.bloco_conteudo{
+    margin: 0;
+}
 .caixa-principal{
     box-shadow: 1px 1px 5px inset var(--default-black);
     min-height: 100dvh;
@@ -124,7 +130,7 @@ section{
                     color: var(--text-light-bg);
                 }
                 & .button{
-                    margin-top: 10px;
+                    margin: 0 0 20px 0;
                     align-self: baseline;
                     text-align: center;
                     border-radius: 10px;
@@ -141,7 +147,6 @@ section{
                 & .button:hover{
                     transform: scale(1.04);
                     background-color: #002024;
-                    color: var(--bg-yellow);
                 }
             }
             .espaco-fotos{

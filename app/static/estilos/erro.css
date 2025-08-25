@@ -10,7 +10,7 @@ body{
     min-width: 450px;
     width: 52%;
     z-index: 4;
-    background-color: wheat;
+    background: linear-gradient(180deg, #fffdf9, #fff8f0);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
