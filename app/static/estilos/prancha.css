@@ -5,7 +5,7 @@
     padding: 20px;
     border-radius: 10px;
     min-width: 350px;
-    width: 35%;
+    width: min(880px, 92vw);
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     margin: auto;
     position: relative;
@@ -74,7 +74,52 @@ button:hover, #voltar:hover {
     background: #004d40;
 }
 
-a{
+a {
     text-decoration: none;
     color: white
+}
+
+li {
+    text-align: center;
+}
+
+.pontuacao {
+    list-style-type: none;
+}
+
+.descricao {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Faz os dois (pontos e imagem) ficarem alinhados verticalmente pelo centro */
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.caixa-pontos {
+  text-align: left; /* Deixa o texto alinhado à esquerda */
+}
+
+.caixa-pontos h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.pontuacao {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pontuacao li {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.pranchas img {
+  max-width: 220px;
+  height: auto;
+} 
+
+.pontuacao li {
+    font-size: 24px;
 }

@@ -197,7 +197,7 @@ input[type="time"]{
     border-radius: 12px;
     padding: 20px;
     margin: 20px auto;
-    width: 500px;
+    width: min(720px, 92vw);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     background: #fffdf9;
 }
@@ -213,6 +213,15 @@ input[type="time"]{
 
 .card p{
     text-indent: 10px;
+}
+
+.previsao {
+    position: relative;
+    z-index: 1;
+    border-radius: 12px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background: #fffdf9;
 }
 
 /* responsividade — reduz títulos em telas pequenas */
