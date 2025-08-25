@@ -1,27 +1,8 @@
-:root{
-  --azul: #0077b6;
-  --azul-claro: #e0f7fa;
-  --bg: #C5F2F8;
-  --texto: #333;
-}
 
 body{
-    background: var(--bg);
     color: var(--texto);
 }
 
-/* Header */
-
-.site-header{
-    background: #015871;
-    color: #fff;
-    text-align: center;
-    padding: 12px;
-}
-
-.site-header h1{
-    font-size: 50px;
-}
 
 .container{
     max-width: 1100px;
@@ -45,16 +26,48 @@ section h2 { margin: 0 0 12px; }
 }
 
 .historia{
-    background: rgb(251, 235, 207);
-    border-radius: 12px;
-    padding: 16px;
-    box-shadow: 0 4px 10px;
+  background: linear-gradient(180deg, #fffdf9, #fff8f0);
+  border-radius: 12px;
+  padding: 1em 2em;
+  box-shadow: 0 4px 10px;
+  color: var(--default-black);
+}
+
+.historia h1{
+  text-align: center;
+  margin-top: 15px;
+  font-size: 2.3rem;
+  color: var(--texto);
+}
+
+.historia h2{
+  text-indent: 20px;
+  color: var(--text-blue);
+  font-size: 1.6em;
+}
+
+.texto-efeito {
+  text-align: center; 
+  font-size: 1.4rem;         
+  font-weight: bold;         
+  font-style: italic;        
+  line-height: 1.4;
+  width: 70%;          
+  max-width: 900px;          
+  margin: 50px auto;         
+  padding: 16px;             
+  color: var(--text-blue);           
+  background: #f0f8ff;       
+  border-left: 6px solid var(--text-blue); 
+  border-radius: 10px;       
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* Seção surfistas */
 #surfistas-2025 {
+  border-radius: 12px;
   padding: 50px 20px;
-  background: var(--bg);
+  background: linear-gradient(180deg, #fffdf9, #fff8f0);
 }
 
 #surfistas-2025 h2 {
@@ -104,21 +117,6 @@ section h2 { margin: 0 0 12px; }
   line-height: 1.4;
 }
 
-.texto-efeito {
-  text-align: center; 
-  font-size: 1.8rem;         
-  font-weight: bold;         
-  font-style: italic;        
-  line-height: 1.6;          
-  max-width: 900px;          
-  margin: 50px auto;         
-  padding: 20px;             
-  color: #003366;           
-  background: #f0f8ff;       
-  border-left: 6px solid #0077b6; 
-  border-radius: 10px;       
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
 
 @keyframes aparecer{
     from{opacity: 0; transform: translateY(8px);}

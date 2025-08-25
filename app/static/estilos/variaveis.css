@@ -18,7 +18,8 @@
     --bg-body: #c3f6fd;           /*Textos do footer */
     --background-bd: #012d33;     /* Fundo principal do body */
     --bg-main: #0092A6;           /* Fundo principal do <main> */
-    --bg-green: #002922;         /* Fundo escuro */
+    --bg-header: #0b5563;         /*Fundo do Cabeçalho*/
+    --bg-green: #002922;          /* Fundo escuro */
     --bg-yellow: #fff3cf;         /* Fundo do <footer> */
 
     /* === Gradientes === */
@@ -35,7 +36,16 @@
 
     --text-light-bg: #012d33;      /* Textos sobre fundos escuros (como caixas e seções) */
     --text-dark-bg: #FFECB3;      /* Textos sobre fundos escuros (como caixas e seções) */
+    --text-blue: #0b5563;         /*Texto azul*/
     --text-light: #FFFFFF;        /* Textos em cabeçalhos, links e efeitos de hover */
     --text-footer: #e0f7fa;       /* Textos no footer */
     --default-black: #000000;      /* Texto padrão e sombras */
+
+    /* Cores básicas */
+
+    --azul: #0077b6;
+    --azul-claro: #e0f7fa;
+    --bg: #C5F2F8;
+    --texto: #333;
+    --branco-less: #f0f0f0;
 }
