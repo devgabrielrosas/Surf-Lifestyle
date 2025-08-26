@@ -12,7 +12,6 @@ html{
 }
 body{
     min-height: 100dvh;
-    position: relative;
     overflow-x: hidden;
     background-color: var(--text-light-bg);
     font-family: var(--font-titles);
