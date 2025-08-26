@@ -1,10 +1,13 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Surf Lifestyle{% endblock %}</title>
     <link rel="shortcut icon" href="{{ url_for('static', filename='imagens/onda_icone_logo.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static', filename='estilos/estilo_base.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos/media_query_base.css') }}">
     <!-- ESTILO GERAL DA BASE -->
     {% block styles %}{% endblock %} <!-- ESTILOS ADICIONAIS DE PÁGINAS -->
 </head>
@@ -64,9 +67,9 @@
                 </p>
             </div>
             <div class="links-rodape">
-                <a href="politica_privacidade" target="_blank">Política de Privacidade</a>
+                <a href="politica_privacidade" target="_blank" >Política de Privacidade</a>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=surf.lifestyle@outlook.com" target="_blank">Fale conosco</a>
-                <a href="https://github.com/devgabrielrosas/Surf-Lifestyle" target="_blank" rel="next">Para desenvolvedores</a>
+                <a href="https://github.com/devgabrielrosas/Surf-Lifestyle" target="_blank" rel="next" id="para_devs">Para desenvolvedores</a>
             </div>
 
         </div>
