@@ -233,6 +233,9 @@ section{
 }
 
 @media (max-width: 550px){
+    .caixa-principal{
+        background-position: 35% center;
+    }
     h1{
         font-size: 2.3em!important;
         margin-bottom: 10px!important;
