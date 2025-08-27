@@ -128,12 +128,13 @@ section h2 { margin: 0 0 12px; }
   justify-content: center;
   background-color: var(--text-blue);
   padding: 10px;
+  min-width: 180px;
   width: 20%;
   cursor: pointer;
 }
 #wsr a{
   text-decoration: none;
-  color: white;
+  color: var(--text-light);
 }
 
 button, #wsr {
