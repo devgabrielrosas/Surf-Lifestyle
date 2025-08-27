@@ -131,3 +131,13 @@ section h2 { margin: 0 0 12px; }
 @media (min-width: 1024px) {
   .surfista img { height: 220px; }
 }
+
+@media (max-width: 620px){
+    h2{
+        text-align: center!important;
+        text-indent: 0!important;
+    }
+    p.texto-efeito{
+        display: none!important;
+    }
+}
