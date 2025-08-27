@@ -1,0 +1,9 @@
+.artigo-politica{
+    padding: 2% 4% 4% 4%;
+    color: var(--text-light)!important;
+    list-style: inside;
+    line-height: 1.5em;
+    & a, strong{
+        color: var(--text-dark-bg);
+    }
+}
