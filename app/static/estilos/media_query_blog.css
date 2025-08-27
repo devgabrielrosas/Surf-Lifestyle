@@ -1,9 +1,0 @@
-@media (max-width: 620px){
-    h2{
-        text-align: center!important;
-        text-indent: 0!important;
-    }
-    p.texto-efeito{
-        display: none!important;
-    }
-}

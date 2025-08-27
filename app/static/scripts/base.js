@@ -29,7 +29,7 @@ var menuSite = document.querySelector('.menu-lateral')
 btnExp.addEventListener('click', function (e) {
     e.stopPropagation() // não fechar ao clicar no botão
     menuSite.classList.toggle('expandir')
-    window.btnExp.style.display="none"
+    btnExp.style.display="none"
 })
 
 // fechar ao clicar fora do menu
