@@ -1,0 +1,249 @@
+#header{
+    background-color: transparent;
+    margin: 10px;
+}
+.bloco_conteudo{
+    margin: 0;
+}
+.caixa-principal{
+    box-shadow: 1px 1px 5px inset var(--default-black);
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-main);
+    background-image: url("../imagens/foto-medina-fundo.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    & .frase-efeito{
+        background-image: url("../imagens/frase-efeito.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 50dvh;
+        width: 100dvw;
+        opacity: 0;
+        animation: fadeIn 0.8s ease forwards;
+        animation-delay: 0.2s;
+    }
+}
+
+section{
+    min-height: 100dvh;
+    background-image: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+    & h1{
+        align-self: center;
+        font-size: 3em;
+        font-family: var(--font-cool);
+        font-weight: 500;
+        margin: 15px 30px 30px 30px;
+        color: var(--text-light);   
+    }
+    & h1::after, h1::before{
+        content: "~";
+    }
+    & .quem-somos{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 0px 6% 50px 6%;
+        background-color: var(--gradient-start);
+        opacity: 0;
+        animation: fadeIn 0.8s ease forwards;
+        animation-delay: 0.2s;
+        & .caixa__quem-somos{
+            display: flex;
+            justify-content: space-around;
+            /* flex-wrap: wrap; */
+            padding: 20px 10px;
+            border-radius: 10px;
+            gap: 30px;
+            & img{
+                border-radius: 10px;
+            }
+        }
+        & p{
+            align-self: center;
+            color: var(--text-light-bg);
+            min-width: 450px;
+            width: 60%;
+            text-align: start;
+            font-size: 20px;
+            line-height: 1.3em;
+            & span{
+                display: block;
+                padding-bottom: 5px;
+            }
+            & strong{
+                color: var(--text-light-bg);
+            }
+        }
+    }
+    & .comece-hoje{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 210px;
+        color: var(--text-dark-bg);
+        opacity: 0;
+        animation: fadeIn 0.8s ease forwards;
+        animation-delay: 0.2s;
+        & .convite{
+            color: var(--text-dark-bg);
+        }
+        & .secao-comece{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100dvw;
+            gap: 10px;
+            & img{
+                border-radius: 10px;
+            }
+            & iframe{
+                width: 100%;
+            }
+            & .caixa__secao-comece{
+                display: flex;
+                /* flex-wrap: wrap; */
+                justify-content: center;
+                padding: 0px 6% 50px 6%;
+            }
+            & article{
+                display: flex;
+                flex-direction: column;
+                max-width: 700px;
+                padding: 20px;
+                & h3{
+                    font-size: 2.2em;
+                }
+                & p{
+                    font-size: 24px;
+                    min-width: 450px;
+                    width: 100%;
+                    margin-bottom: 20px;
+                    color: var(--text-light-bg);
+                }
+                & .button{
+                    margin: 0 0 20px 0;
+                    align-self: baseline;
+                    text-align: center;
+                    border-radius: 10px;
+                    background-color: var(--text-light-bg);
+                    font-size: 18px;
+                    font-weight: 700;
+                    padding: 13px;
+                    text-decoration: none;
+                    text-transform: none;
+                    color: var(--text-light);
+                    transition: 0.3s;
+
+                }
+                & .button:hover{
+                    transform: scale(1.04);
+                    background-color: #002024;
+                }
+            }
+            .espaco-fotos{
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 15px;
+                max-width: 600px;
+                & img{
+                    object-fit: cover;
+                    aspect-ratio: 1 / 1;
+                    width: 100%;                    
+                }
+                & img:hover{
+                    transform: scale(1.03);
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+        }
+        & strong, h3{
+            color: var(--text-light-bg);
+        }
+        & h2{
+            align-self: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+
+.mensagem-success {
+    color:#0b6b3d;
+    padding: 5px;
+    margin-bottom: 10px;
+    border:1px solid rgba(11,107,61,0.08); 
+    background: #e8ffef;
+}
+.mensagem-error {
+    color: #9b1b1b;
+    background: #ffe6e6;
+    margin-bottom: 10px;
+    border:1px solid rgba(155,27,27,0.08);
+    padding: 5px;
+}
+
+@media (max-width: 1100px){
+    div.frase-efeito{
+        background-size: contain!important;
+        width: 80vw!important;
+    }
+    section h1{
+        font-size: 2.5em;
+    }
+    .quem-somos{
+        & .caixa__quem-somos{
+            flex-direction: column; 
+            & p{
+                width: 80%;
+                text-align: center;
+            }   
+        }
+        & p{
+            min-width: 200px!important;
+        }
+    }
+    
+    .caixa__secao-comece{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    & .button{
+        align-self: center!important;
+    }
+    & p{
+        min-width: 200px!important;
+    }
+}
+
+@media (max-width: 400px){
+    .caixa__form{
+        min-width: 270px!important;
+    }
+}
+
+@media (max-width: 550px){
+    .caixa-principal{
+        background-position: 35% center;
+    }
+    h1{
+        font-size: 2.3em!important;
+        margin-bottom: 10px!important;
+    }
+    h1::after, h1::before{
+        content: none!important;
+    }
+    .comece-hoje{
+        padding-bottom: 100px!important;
+    }
+}

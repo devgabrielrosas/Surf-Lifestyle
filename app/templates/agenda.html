@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='estilos/agenda.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="card">
+  <h1>🌊 Condições de Surf da Praia de Intermares</h1>
+
+  {% if previsao %}
+    <div class="previsao">
+      <p><strong>Altura da Maré:</strong> {{ previsao.waveHeight.noaa }} m</p>
+      <p><strong>Temperatura da Água:</strong> {{ previsao.waterTemperature.noaa }} °C</p>
+      <p><strong>Vento:</strong> {{ previsao.windSpeed.noaa }} m/s ({{ previsao.windDirection.noaa }}°)</p>
+    </div>
+  {% else %}
+    <p>❌ Não foi possível carregar a previsão agora.</p> 
+  {% endif %}
+</div>
+
+<div class="container" role="main" aria-labelledby="agendar-title">
+    <h1 id="agendar-title">Agendamento</h1>
+    <h2>Aulas de surf — Praia de Intermares</h2>
+
+    <p class="lead">Preencha seus dados, escolha a data e um horário disponível. Caso o horário esteja indisponível, tente outro horário.</p>
+
+    {# mostra mensagens de erro/sucesso (flash) #}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="flashes">
+          {% for category, msg in messages %}
+            <li class="flash {{ category }}">{{ msg }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+  <form action="{{ url_for('main.agenda') }}" method="post" class="form" autocomplete="off">
+      <label for="nome">Seu nome</label>
+      <input id="nome" name="nome" type="text" placeholder="Nome completo" required>
+
+      <label for="telefone">Telefone</label>
+      <input id="telefone" name="telefone" type="text" placeholder="(xx) 9xxxx-xxxx" required>
+
+      <label for="data">Escolha a data</label>
+      <input id="data" name="data" type="date" {% if min_date %} min="{{ min_date }}" {% endif %} required>
+
+      <fieldset class="times" aria-label="Horários disponíveis">
+          <h2>Horários disponíveis</h2>
+
+          <div class="slots">
+              {% for h in horarios %}
+                  <input id="slot-{{ h|replace(':','-') }}" name="horario" type="radio" value="{{ h }}" {% if loop.first %}required{% endif %}>
+                  <label for="slot-{{ h|replace(':','-') }}" class="slot">{{ h }}</label>
+              {% endfor %}
+
+          </div>
+      </fieldset>
+
+      <div class="actions">
+          <button type="submit" class="btn">Agendar</button>
+          <button type="reset" class="btn btn-ghost">Limpar</button>
+      </div>
+
+      <p class="foot">Aulas em Intermares — disponibilidade sujeita à confirmação.</p>
+  </form>
+
+
+</div>
+{% endblock %}

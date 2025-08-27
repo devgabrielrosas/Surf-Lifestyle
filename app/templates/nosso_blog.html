@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='estilos/nosso_blog.css') }}">
+{% endblock %}
+
+{% block content %}
+
+  <main class="container">
+    <!--  Seção da história (fica no topo) -->
+    <section id="historia" class="historia">
+
+      <h1>História do surf</h1>
+
+      <h2>As Origens Primitivas</h2>
+      <p>As primeiras evidências do Surf remontam a povos polinésios, como os havaianos, samoanos e tahitianos, que possivelmente praticavam o Surf por volta de <strong>1500 a.C</strong>. Para essas civilizações, o Surf não era apenas um esporte, mas uma parte intrínseca de suas tradições culturais e espirituais. As pranchas eram esculpidas à mão a partir de madeira de árvores nativas, e o Surf era frequentemente associado a rituais religiosos e festivais.Talvez ainda antes dos polinésios, no litoral do Peru, os povos antigos surfavam com uma espécie de canoa, ou prancha feita com junco, os famosos <strong>Caballitos de Totora</strong>. Muitos afirmam que esse é o primeiro registro de Surf que se conhece. O Surf continuou a evoluir com o avanço das tecnologias de pranchas e equipamentos. Pranchas mais curtas e ágeis permitiram manobras mais radicais, enquanto o uso do leash (uma corda que prende a prancha ao tornozelo do surfista) tornou a prática do Surf mais segura.</p>
+
+      <br>
+      <div class="imagens-lado-a-lado">
+        <img src="../static/imagens/Duke-surfando.jpg" alt="">
+        <img src="../static/imagens/Duke_Kahanamoku.jpg" alt="">
+      </div>
+      <br>
+
+      <h2>O Surf como Competição e Esporte Olímpico</h2>
+      <p>As competições também se tornaram uma parte essencial da cultura do Surf, com o surgimento de circuitos profissionais e eventos de renome mundial, como o <strong>Championship Tour</strong>. O primeiro campeonato mundial de Surf com um circuito bem organizado ocorreu em <strong>1976</strong> e o australiano Peter Townend foi o primeiro campeão mundial. Em 1992, a ASP decidiu dividir o Circuito Mundial em duas divisões: WCT e WQS, e esse formato se mantém parecido até os dias de hoje.</p>
+      <p>Um momento marcante para o Surf foi sua <strong>inclusão nos Jogos Olímpicos</strong> de Verão em Tóquio 2020. Pela primeira vez, os melhores surfistas do mundo competiram nas ondas olímpicas, dando ao esporte uma visibilidade sem precedentes e aumentando ainda mais seu apelo global. E para melhorar ainda mais essa história, <strong>o primeiro ouro olímpico masculino no Surf foi para um Brasileiro: Ítalo Ferreira.</strong></p>
+
+      <br>
+      <div class="imagens-lado-a-lado">
+        <img src="../static/imagens/esporte_olimpico.jpg" alt="">
+        <img src="../static/imagens/Italo_Ferreira_medalha_de_ouro_na_primeira_olimpiadas_com_surf.jpg" alt="">
+      </div>
+      <br>
+
+      <h2>O Surf e o Meio Ambiente</h2>
+      <p>Enquanto o Surf continuou a prosperar, os surfistas também se tornaram defensores apaixonados do meio ambiente. Com uma conexão íntima com o mar, eles testemunharam em primeira mão os <strong></strong>. Como resultado, muitos surfistas estão envolvidos em iniciativas de preservação costeira e na conscientização sobre questões ambientais. Inclusive existe desde 2009 a WSR (World Surfing Reserves - ou reserva mundial de Surf) que é uma <strong>ONG criada para preservar praias e meio ambientes ligados ao Surf no mundo inteiro</strong>:</p>
+      <br>
+      <div class="imagens-lado-a-lado">
+        <img src="../static/imagens/Guarda.jpg" alt="">
+        <img src="../static/imagens/World_Surfing_Reserves.jpg" alt="">
+      </div>
+      <div id="caixa-wsr">
+        <form><input type="submit" value="World Surfing Reserves" formaction="https://www.savethewaves.org/wsr/" formtarget="_blank" id="wsr"></form>
+      </div>
+
+      <p class="texto-efeito">
+        Da ancestralidade das ondas polinésias à energia do futuro,<br>
+        a história do surf continua viva na praia de Intermares,<br>
+        onde cada maré escreve um novo capítulo dessa paixão.
+      </p>
+
+    </section>
+
+<section id="surfistas-2025">
+  <h2>Maiores Surfistas da atualidade</h2>
+
+  <div class="surfistas-grid">
+
+    <!-- Gabriel Medina -->
+    <article class="surfista">
+      <img src="../static/imagens/medina.jpeg" alt="Gabriel Medina">
+      <div class="conteudo">
+        <h3>Gabriel Medina</h3>
+        <p><b>País:</b> Brasil</p>
+        <p><b>Títulos:</b> 3 Mundiais (2014, 2018, 2021)</p>
+        <p><b>Resumo:</b> Considerado um dos maiores surfistas da história, 
+          Medina é conhecido por suas manobras aéreas e competitividade intensa. 
+          Continua sendo um dos favoritos ao título mundial em 2025.</p>
+      </div>
+    </article>
+
+    <!-- Filipe Toledo -->
+    <article class="surfista">
+      <img src="../static/imagens/kely.jpg" alt="Robert Kelly Slater">
+      <div class="conteudo">
+        <h3>Robert Kelly Slater</h3>
+        <p><b>País:</b> Estados Unidos</p>
+        <p><b>Títulos:</b> 11 Campeonatos Mundiais (1992, 1994, 1995, 1996, 1997, 1998, 2005, 2006, 2008, 2010, 2011)</p>
+        <p><b>Resumo:</b> Kelly Slater ajudou a popularizar o surfe globalmente e continua a definir padrões no esporte. Seus recordes e conquistas solidificam seu lugar como um dos melhores surfistas do mundo.</p>
+      </div>
+    </article>
+
+    <!-- Italo Ferreira -->
+    <article class="surfista">
+      <img src="../static/imagens/mark.jpeg" alt="Mark Richards">
+      <div class="conteudo">
+        <h3>Mark Richards</h3>
+        <p><b>País:</b> Austrália</p>
+        <p><b>Títulos:</b> 4 Campeonatos Mundiais (1979, 1980, 1981, 1982)</p>
+        <p><b>Resumo:</b> Na lista de melhores surfistas do mundo, certamente Mark Richards tem um destaque. Sua inovação na modelagem de pranchas também foi revolucionária.</p>
+      </div>
+    </article>
+
+    <!-- Carissa Moore -->
+    <article class="surfista">
+      <img src="../static/imagens/andy.jpg" alt="Philip Andrew Irons">
+      <div class="conteudo">
+        <h3>Philip Andrew Irons</h3>
+        <p><b>País:</b> Havaí (EUA)</p>
+        <p><b>Títulos:</b> 3 Campeonatos Mundiais (2002, 2003, 2004)</p>
+        <p><b>Resumo:</b> Andy Irons trouxe um estilo radical ao surfe e foi tricampeão mundial, levando os títulos de 2002, 2003 e 2004, deixando uma marca indelével no surfe, destacando-se como um dos maiores surfistas do mundo.</p>
+      </div>
+    </article>
+
+    <!-- Stephanie Gilmore -->
+    <article class="surfista">
+      <img src="../static/imagens/italo.jpg" alt="Ítalo Ferreira">
+      <div class="conteudo">
+        <h3>Ítalo Ferreira</h3>
+        <p><b>País:</b> Austrália</p>
+        <p><b>Títulos:</b> 1 Campeonato Mundial (2019), 1 Medalha de Ouro Olímpica (2020)</p>
+        <p><b>Resumo:</b> Sua vitória na etapa de Peniche, em Portugal, com a eliminação de ícones como Kelly Slater e Gabriel Medina, consolidaram sua posição de liderança no surfe global.</p>
+      </div>
+    </article>
+
+    <!-- John John Florence -->
+    <article class="surfista">
+      <img src="../static/imagens/john.jpg" alt="John John Florence">
+      <div class="conteudo">
+        <h3>John John Florence</h3>
+        <p><b>País:</b> Havaí (EUA)</p>
+        <p><b>Títulos:</b> 2 Mundiais (2016, 2017)</p>
+        <p><b>Resumo:</b> Um dos surfistas mais talentosos de todos os tempos, 
+          famoso por sua técnica impecável em ondas grandes como Pipeline.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+  </main>
+
+{% endblock %}

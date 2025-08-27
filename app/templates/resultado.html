@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='estilos/prancha.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container" id="resultado">
+    <h1>Sua prancha ideal é: <span class="highlight">{{ prancha }}</span>!</h1>
+    <h2>Descrição:</h2>
+        {% if prancha=='longboard'%}
+            <p>O <strong>Longboard</strong> tem comprimento geralmente acima de 2,75m, oferece flutuação alta e é <strong>ótimo para iniciantes</strong>. É mais fácil de remar, entrar na onda cedo e permite manobras clássicas como o hang ten (andar até a ponta da prancha). É indicado para <strong>ondas pequenas e médias</strong>.</p>
+        {% elif prancha=='funboard'%}
+            <p>O <strong>Funboard</strong> possui comprimento intermediário, entre 2,15m e 2,45m, sendo uma mistura do longboard com o shortboard. É bom para quem já <strong>saiu do nível iniciante</strong>, mas ainda quer <strong>estabilidade</strong>, funcionando bem em várias condições de onda.</p>
+        {% elif prancha=='shortboard'%}
+            <p>O <strong>Shortboard</strong> mede geralmente de 1,70m à 2m, é <strong>mais manobrável</strong>, usado em campeonatos e para <strong>ondas mais rápidas e fortes</strong>. Exige mais experiência, pois é mais difícil remar e pegar a onda, sendo ideal para <strong>surfistas avançados</strong>.</p>
+        {% elif prancha=='fish'%}
+            <p>O <strong>Fish</strong> é curto e largo, com bico arredondado e rabeta em forma de “cauda de peixe”. Possui boa flutuação para o tamanho, é ótimo em <strong>ondas pequenas e fracas</strong>, mas também aguenta ondas médias. Proporciona <strong>velocidade e fluidez</strong>, mantendo diversão em dias de mar menor.</p>
+        {% endif %}
+        <br>
+        <h2>Pontuação:</h2>
+        <div class="descricao">
+            <div class="caixa-pontos">
+                <ul class="pontuacao">
+                    {% for tipo, pontos in pontos.items() %}
+                        <li>{{ tipo }}:<span class="highlight"> {{ pontos }} pontos</span></li>
+                    {% endfor %}
+
+                </ul>
+            </div>
+            <div class="pranchas">
+                {% if prancha=='longboard'%}
+                    <img src="{{ url_for('static', filename='imagens/longboard.jpg') }}" height="200" alt="longboard">
+                {% elif prancha=='funboard'%}
+                    <img src="{{ url_for('static', filename='imagens/funboard.avif') }}" height="200" alt="funboard">
+                {% elif prancha=='shortboard'%}
+                    <img src="{{ url_for('static', filename='imagens/shortboard.jpg') }}" height="200" alt="shortboard">
+                {% elif prancha=='fish'%}
+                    <img src="{{ url_for('static', filename='imagens/fishboard.jpg') }}" height="200" alt="fishboard">
+                {% endif %}
+            </div>
+        </div>
+        <form><input type="submit" value="Voltar" formaction="prancha" id="voltar"></form>
+    </div>
+</div>
+{% endblock %}

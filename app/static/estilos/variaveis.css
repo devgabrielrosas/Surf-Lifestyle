@@ -1,0 +1,51 @@
+:root {
+    /* Fontes: */
+
+    /* Usada para textos de estilo versátil */
+
+    --font-cool: 'Pacifico', cursive;
+
+    /* Usada para títulos e elementos principais (body, html). */
+
+    --font-titles: 'Bebas Neue', sans-serif;
+
+    /* Usada para textos de parágrafos (p) e links (a). */
+
+    --font-main: 'Open Sans', sans-serif;
+
+    /* === Cores de fundo === */
+
+    --bg-body: #c3f6fd;           /*Textos do footer */
+    --background-bd: #012d33;     /* Fundo principal do body */
+    --bg-main: #0092A6;           /* Fundo principal do <main> */
+    --bg-header: #0b5563;         /*Fundo do Cabeçalho*/
+    --bg-green: #002922;          /* Fundo escuro */
+    --bg-yellow: #fff3cf;         /* Fundo do <footer> */
+
+    /* === Gradientes === */
+
+    --gradient-section: #4e6469;    /* Início do gradiente nas sections */
+    --gradient-start: #569199;    /* Início do gradiente nas sections */
+    --gradient-end: #65ECFD;      /* Fim do gradiente nas sections */
+
+    /* === Cores de destaque === */
+
+    --highlight: #2C796B;         /* Destaques, títulos e <strong> */
+
+    /* === Cores de texto === */
+
+    --text-light-bg: #012d33;      /* Textos sobre fundos escuros (como caixas e seções) */
+    --text-dark-bg: #FFECB3;      /* Textos sobre fundos escuros (como caixas e seções) */
+    --text-blue: #0b5563;         /*Texto azul*/
+    --text-light: #FFFFFF;        /* Textos em cabeçalhos, links e efeitos de hover */
+    --text-footer: #e0f7fa;       /* Textos no footer */
+    --default-black: #000000;      /* Texto padrão e sombras */
+
+    /* Cores básicas */
+
+    --azul: #0077b6;
+    --azul-claro: #e0f7fa;
+    --bg: #C5F2F8;
+    --texto: #333;
+    --branco-less: #f0f0f0;
+}

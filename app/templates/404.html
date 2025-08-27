@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='estilos/erro.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>404</h1>
+    <h2>Página não encontrada!!!</h2>
+    <p>A página que você tentou acessar não existe. Volte para a página inicial!!</p>
+    <p id="txt">Está perdido? Reme de volta para a praia</p>
+    <a href="/" class="btn">Voltar</a>
+</div>
+{% endblock %}

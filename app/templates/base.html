@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Surf Lifestyle{% endblock %}</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='imagens/onda_icone_logo.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos/estilo_base.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- ESTILO GERAL DA BASE -->
+    {% block styles %}{% endblock %} <!-- ESTILOS ADICIONAIS DE PÁGINAS -->
+</head>
+<body>
+    <header id="header">
+        <a href="/" id="logo"><img class="logo" src="{{ url_for('static', filename='imagens/logo.png') }}" alt="Logo Surf Lifestyle"> <p>Intermares</p></a>
+        <i class="bi bi-list" id="btn-exp"></i>
+    </header>
+    <nav class="menu-lateral">
+        <ul class="base">
+            <i class="bi bi-list" id="btn-close"></i>
+            <li class="item-menu">
+                <a href="/" id="inicio">
+                    <span class="icon"><i class="bi bi-house-door"></i></span>
+                    <span class="txt-link">Início</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="nosso_blog">
+                    <span class="icon"><i class="bi bi-columns-gap"></i></span>
+                    <span class="txt-link">Nosso Blog</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="agenda">
+                    <span class="icon"><i class="bi bi-calendar-event"></i></span>
+                    <span class="txt-link">Agenda</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="prancha">
+                    <span class="icon"><i class="bi bi-clipboard2-fill"></i></span>
+                    <span class="txt-link">Sua Prancha</span>
+                </a>
+            </li>
+        </ul>
+
+    </nav><!--menu lateral-->
+    <div class="bloco_conteudo">
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+    <footer id="sobre">
+        <div class="ocean">
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+        
+        <div class="sobre__caixa_pai">
+            <div class="sobre__caixa">
+                <a href="/" class="caixa__logo">
+                    <img src="../static/imagens/logo.png" alt="">
+                </a>
+                <p>
+                    © 2025 Alan Clemente, Gabriel Rosas, Jairo Costa, Thalyson Felício — Projeto acadêmico. Todos os direitos reservados.
+                </p>
+            </div>
+            <div class="links-rodape">
+                <a href="politica_privacidade" target="_blank" >Política de Privacidade</a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=surf.lifestyle@outlook.com" target="_blank">Fale conosco</a>
+                <a href="https://github.com/devgabrielrosas/Surf-Lifestyle" target="_blank" rel="next" id="para_devs">Para desenvolvedores</a>
+            </div>
+
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='scripts/base.js') }}"></script>
+</body>
+</html>

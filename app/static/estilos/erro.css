@@ -1,0 +1,55 @@
+body{
+    overflow: hidden;
+}
+.bloco_conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    min-width: 450px;
+    width: 52%;
+    z-index: 4;
+    background: linear-gradient(180deg, #fffdf9, #fff8f0);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Número 404 Grande */
+h1{
+    font-size: 100px;
+    color: #333;
+    margin: 0;
+}
+
+h2{
+    font-size: 32px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.container p{
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+#txt{
+    margin-bottom: 15px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-color: #005fa3;
+}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='estilos/erro.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>500</h1>
+    <h2>Erro interno no servidor!!!</h2>
+    <p>Algo deu errado. Tente novamente mais tarde.</p>
+    <p id="txt">Reme de volta para a praia</p>
+    <a href="/" class="btn">Voltar</a>
+</div>
+{% endblock %}

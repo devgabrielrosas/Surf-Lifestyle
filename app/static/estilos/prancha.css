@@ -1,0 +1,125 @@
+
+.container { 
+    background: var(--branco-less);
+    z-index: 1;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 350px;
+    width: min(880px, 92vw);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: auto;
+    position: relative;
+    color: var(--text-blue);
+}
+#resultado{
+    color: var(--black-default);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 95%;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    color: #00796b;
+}
+label p{
+    padding: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 18px;
+}
+select{
+    border-radius: 5px;
+    transition: 0.05s;
+}
+select:hover{
+    outline: 2px solid black;
+}
+.highlight {
+    color: #00796b;
+}
+
+select, button, #voltar {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+button, #voltar {
+    width: 80%;
+    align-self: center;
+    margin-top: 20px;
+    background: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+button:hover, #voltar:hover {
+    transform: scale(1.03);
+    background: #004d40;
+}
+
+a {
+    text-decoration: none;
+    color: white
+}
+
+li {
+    text-align: center;
+}
+
+.pontuacao {
+    list-style-type: none;
+}
+
+.descricao {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Faz os dois (pontos e imagem) ficarem alinhados verticalmente pelo centro */
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.caixa-pontos {
+  text-align: left; /* Deixa o texto alinhado à esquerda */
+}
+
+.caixa-pontos h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.pontuacao {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pontuacao li {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.pranchas img {
+  max-width: 220px;
+  height: auto;
+} 
+
+.pontuacao li {
+    font-size: 24px;
+}

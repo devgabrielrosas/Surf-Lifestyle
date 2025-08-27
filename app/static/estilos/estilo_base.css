@@ -1,0 +1,380 @@
+@import url('./variaveis.css');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100dvh;
+    overflow-x: hidden;
+    background-color: var(--text-light-bg);
+    font-family: var(--font-titles);
+    display: flex;
+    flex-direction: column;
+    & p,a{
+        font-family: var(--font-main);
+    }
+    & strong {
+        color: var(--highlight);
+    }
+}
+
+/* CABEÇALHO */
+#header{
+    z-index: 900;
+    width: 100%;
+    max-height: 130px;
+    position: fixed;
+    display: flex;
+    background-color: var(--bg-header);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    transition: 0.5s;
+    & .logo{
+        height: 45px;
+    }
+}
+
+#logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    text-transform: none;
+    color: var(--text-light);
+    gap: 5px;
+}
+
+#logo p{
+    font-family: var(--font-cool);
+    font-size: 17px;
+}
+
+
+#header.show {
+    align-self: center;
+    width: 98% !important;
+    top: 0;
+    margin: 0.5rem 0 0 0.5rem !important;
+    background: #0065728c;
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0.2125rem);
+    border: 0.0625rem solid rgba(226, 219, 212, 0.4) !important;
+}
+
+/* FIM CABEÇALHO */
+#inicio{
+    margin-top: 10px;
+}
+i#btn-exp, i#btn-close{
+    z-index: 1000;
+    margin-right: 30px;
+    color: var(--text-light);
+    font-size: 24px;
+    font-weight: 700;
+}
+i#btn-exp:hover, i#btn-close:hover{
+    cursor: pointer;
+}
+
+i#btn-close{
+    margin-bottom: 100px;
+}
+
+/* MENU LATERAL */
+nav.menu-lateral{
+    position: fixed;
+    text-wrap: nowrap;
+    height: 100%;
+    background-color: #006572;
+    padding: 28px 0 40px 1% ;
+    box-shadow: 3px 0 0 #002922;
+    z-index: 901;
+    top: 0;
+    left: 100%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+nav.menu-lateral.expandir{
+    z-index: 901;
+    width: 300px;
+    left: calc(100% - 300px);
+}
+
+
+ul.base{
+    height: 1005;
+    list-style-type: none;
+}
+
+ul li.item-menu{
+    transition: 0.5s;
+}
+
+ul li.ativo{
+    background-color: #569199;
+}
+
+ul li.item-menu:hover{
+    background: #569199;
+}
+
+ul li.item-menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 35px;
+}
+
+ul li.item-menu a .txt-link{
+    margin-left: 40px;
+}
+
+ul li.item-menu a .icon > i{
+    font-size: 30px;
+    margin-left: 10px;
+}
+/* FIM MENU LATERAL */
+
+.bloco_conteudo {
+    flex: 1;
+    margin: 80px 0 150px 0;
+}
+
+.sobre__caixa_pai{
+    background-color: #015871;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0 10px;
+    & .links-rodape{
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+    }
+    & .links-rodape a{
+        align-self: flex-end;
+        text-wrap: nowrap;
+        font-size: 14px;
+        font-weight: 300;
+        text-transform: none;
+        text-decoration: none;
+        color: var(--text-light);
+    }
+    & .links-rodape a:hover{
+        text-decoration: underline;
+    }
+}
+
+#sobre{
+    overflow-x: cover;
+}
+
+.sobre__caixa{
+    background-color: #015871;
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    & p{
+        width: 100%;
+        text-align: justify;
+        color: var(--text-light);
+    }
+
+    & .caixa__logo{
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        text-transform: none;
+        color: var(--text-light-bg);
+        & img{
+            height: 40px;
+
+        }
+    }
+}
+
+.ocean { 
+    height: 5%;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    background: #015871;
+}
+
+.wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+    position: absolute;
+    top: -198px;
+    width: 6400px;
+    height: 198px;
+    animation: wave 14s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    transform: scaleY(0.5) translate3d(0, 0, 0);
+    transform-origin: bottom; 
+}
+
+.wave:nth-of-type(2) {
+    top: -175px;
+    animation: wave 15s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+    opacity: 1;
+}
+
+#fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes wave {
+    0% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -1600px;
+    }
+}
+
+@keyframes swell {
+    0%, 100% {
+        transform: translate3d(0,-25px,0);
+    }
+    50% {
+    transform: translate3d(0,5px,0);
+    }
+}
+
+@media (max-width: 350px) {
+    #header{
+        gap: 20px;
+        & i#btn-exp, i#btn-close{
+            font-size: 20px;
+            margin-right: 20px;
+        }
+        & #logo{
+            & img{
+                height: 30px!important;
+            }
+            & p{
+                display: none;
+            }
+        }
+    }
+    .menu-lateral.expandir{
+        width: 200px!important;
+        left: calc(100% - 200px)!important;
+    }
+    .menu-lateral{
+        & ul li.item-menu a{
+            font-size: 18px;
+            padding: 10px 4%;
+            align-items: baseline;
+        }
+        & ul li.item-menu a .icon > i{
+            font-size: 24px;
+        }
+        & ul li.item-menu a .txt-link{
+            margin-left: 10px;
+        }
+    }
+}
+@media (min-width: 351px) and (max-width: 550px){
+    #header{
+        gap: 20px;
+        & i#btn-exp, i#btn-close{
+            font-size: 22px;
+            margin-right: 20px;
+        }
+        & #logo{
+            & img{
+                height: 35px!important;
+            }
+            & p{
+                display: none;
+            }
+        }
+    }
+    .menu-lateral.expandir{
+        width: 200px!important;
+        left: calc(100% - 200px)!important;
+    }
+    .menu-lateral{
+        & ul li.item-menu a{
+            font-size: 18px;
+            padding: 10px 4%;
+            align-items: baseline;
+        }
+        & ul li.item-menu a .icon > i{
+            font-size: 24px;
+        }
+        & ul li.item-menu a .txt-link{
+            margin-left: 10px;
+        }
+    }
+}
+@media (max-width: 550px){
+    .bloco_conteudo{
+        margin: 70px 0 30px 0;
+    }
+    .sobre__caixa_pai{
+        padding: 10px;
+        flex-direction: column;
+    }
+    .sobre__caixa{
+        flex-direction: column-reverse;
+        font-size: 14px;
+        align-items: center;
+        & p{
+            text-align: center;
+
+        }
+    }
+    .links-rodape{
+        justify-content: space-around!important;
+    }
+    .ocean{
+        display: none;
+    }
+}
+@media (max-width: 415px){
+    #para_devs{
+        display: none;
+    }
+}
+
+@media (min-width:551px) and (max-width: 1200px){
+    .sobre__caixa_pai{
+        flex-direction: column!important;
+        gap: 15px;
+        & .links-rodape{
+            gap: 15px;
+        }
+    }
+}
