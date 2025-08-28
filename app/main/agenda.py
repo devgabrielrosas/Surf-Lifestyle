@@ -1,6 +1,6 @@
 # app/main/agenda.py
 import os, requests
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from flask import render_template, request, redirect, url_for, flash, current_app
 
 from . import main
@@ -93,7 +93,7 @@ def agenda():
             "telefone": telefone,
             "data": data_str,
             "hora": hora_str,
-            "criado_em": datetime.utcnow().isoformat()
+            "criado_em": (datetime.utcnow() - timedelta(hours=3)).isoformat()
         }
 
         try:
