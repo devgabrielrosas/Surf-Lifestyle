@@ -20,5 +20,10 @@ def erro_interno(e):
 def template_nao_encontrado(e):
     return render_template("404.html", mensagem="Template não encontrado!"), 500
 
+@app.get("/healthz")
+def healthz():
+    return {"status": "ok"}, 200
+
+
 if __name__ == '__main__':
     app.run(debug=True)
