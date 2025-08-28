@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: surf-lifestyle
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn wsgi:app
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.5
+      - key: FLASK_ENV
+        value: production
+    healthCheckPath: /healthz
