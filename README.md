@@ -2,9 +2,9 @@
 
  Este projeto tem a proposta de ser um swell desenvolvido de surfistas para surfistas, com o objetivo de unificar conhecimentos advindos da arte e do estilo de vida que o Surf pode proporcionar. Incorporando aspectos da Engenharia de Software para compartilhar e espalhar ainda mais jeitos de marolar a vida. 
 
-<!-- ## 🔗 Acesse o projeto -->
+## 🔗 Acesse o projeto 
 
-<!-- [➡️ Clique aqui para visualizar a página]() -->
+[➡️ Clique aqui para visualizar a página](https://surf-lifestyle.onrender.com)
 
 ## 🏖️ Tecnologias utilizadas
 
