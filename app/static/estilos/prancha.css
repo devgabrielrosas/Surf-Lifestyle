@@ -13,6 +13,7 @@
 }
 #resultado{
     color: var(--black-default);
+    padding: 4%;
 }
 form{
     display: flex;
@@ -85,18 +86,21 @@ li {
 
 .pontuacao {
     list-style-type: none;
+    list-style: inside;
 }
 
 .descricao {
   display: flex;
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center;     /* Faz os dois (pontos e imagem) ficarem alinhados verticalmente pelo centro */
-  gap: 40px;
+  gap: 25px;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .caixa-pontos {
   text-align: left; /* Deixa o texto alinhado à esquerda */
+  padding-left: 5px;
 }
 
 .caixa-pontos h3 {
@@ -111,12 +115,13 @@ li {
 }
 
 .pontuacao li {
-  margin: 5px 0;
+  margin: 5px 0 5px 5px;
   font-weight: bold;
 }
 
 .pranchas img {
   max-width: 220px;
+  margin-right: 5px;
   height: auto;
 } 
 
