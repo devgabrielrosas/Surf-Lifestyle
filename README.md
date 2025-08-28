@@ -14,6 +14,7 @@
 - JavaScript
 - Flask
 - Make
+- n8n
 
 ## 🏄 Manobras/Funcionalidades
 
