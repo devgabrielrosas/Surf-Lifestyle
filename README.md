@@ -6,6 +6,8 @@
 
 [➡️ Clique aqui para visualizar a página](https://surf-lifestyle.onrender.com)
 
+![Preview do site](./app/static/imagens/preview.png)
+
 ## 🏖️ Tecnologias utilizadas
 
 - HTML5
